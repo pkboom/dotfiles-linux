@@ -1,0 +1,35 @@
+alias gs="git status"
+alias gc="git commit -m"
+alias gca="git commit -ma"
+alias ga="git add ."
+alias gl='git log --decorate --oneline --graph --all'
+alias nah="git reset --hard && git clean -df"
+alias wip="git add . && git commit -m 'wip'"
+#alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+
+alias dev='npm run dev'
+alias watch='npm run watch'
+
+alias pbcopy='xclip -sel clip'
+
+curll() { curl http://localhost:8000/$1 }
+cds() { cd /opt/lampp/htdocs && ls; }
+vs() { cd /opt/lampp/htdocs/$1 && code .; }
+art() {
+    if [ -n "$1" ]; then # If command line argument is present
+        if [ $1 = "tinker" ]; then
+            rlwrap php artisan tinker
+        else
+            php artisan $@
+        fi
+    else
+        php artisan
+    fi
+}
+
+dir=${PWD##*/}
+server="htdocs"
+project="project"
+if [ "$server" = "$dir" ] || [ "$project" = "$dir" ]; then
+    ls
+fi

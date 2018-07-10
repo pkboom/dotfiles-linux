@@ -1,0 +1,57 @@
+Quit window
+gnome-session-quit --power-off
+icons/Mint-x/apps/96/boot.svg
+
+
+software manager
+deluge,CUPS-PDF, skype, vim-gnome, Gluqlo(screensaver), albert(keyboard launcher)
+zsh with default setting + plugin(git), kakaotalk
+php xdebug + vscode
+vscode
+terminal font - inconsolata
+
+system settings → sound → sound effects → starting sound off / leaving cinnamon off
+
+리눅스에서 카카오톡
+
+
+Change Mouse Button Modifier
+sudo apt-get install dconf-tools
+find ‘mouse’
+wm/preference
+mouse-button-modifier -> <super> or <meta>
+
+Community driven help
+npm install -g tldr
+
+Keyboard shortcuts
+Windows->Positioning
+Resize window: Meta+Alt+Right or Left
+Toggle maximization: Meta+M
+
+Terminal
+gnome-terminal --working-directory=/home/y/code
+Super+v
+
+Server
+gnome-terminal --command="sudo /opt/lampp/server-start"
+Super+s
+
+pbcopy
+sudo apt-get install -y xclip
+.aliases
+alias pbcopy="xclip -sel clip"
+source ~/.zshrc
+cat .env | pbcopy
+
+Install latest mysql on Lampp
+https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-18-04
+
+sudo service mysql start/stop/restart/status
+
+
+No Password for y
+$ sudo visudo
+y ALL=(ALL) NOPASSWD: ALL
+
+

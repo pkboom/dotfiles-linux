@@ -1,0 +1,32 @@
+<folder name: only lowercase>
+
+$ sudo gvim /opt/lampp/etc/httpd.conf
+
+# Virtual hosts
+Include etc/extra/httpd-vhosts.conf
+
+$ sudo gvim /etc/hosts
+
+127.0.0.1 localhost
+127.0.0.1 ex1.local
+127.0.0.1 ex2.local
+
+
+$ sudo gvim /opt/lampp/etc/extra/httpd-vhosts.conf
+
+<VirtualHost *:80>
+  DocumentRoot /opt/lampp/htdocs/project/ex2
+  ServerName ex2.local
+</VirtualHost>
+
+create folders(ex1, ex2)
+$ sudo mkdir -p /opt/lampp/htdocs/project/{ex1,ex2}
+$ sudo chown -R $USER:$USER /opt/lampp/htdocs/project
+$ sudo chmod -R 777 /opt/lampp/htdocs/project
+(7=read write excute, user/group/others)
+
+$ sudo /opt/lampp/lampp start 
+OR
+$ sudo /opt/lampp/lampp restart
+
+
