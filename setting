@@ -1,10 +1,13 @@
+install composer
+install nodejs & npm
+
 Quit window
 gnome-session-quit --power-off
 icons/Mint-x/apps/96/boot.svg
 
 
 software manager
-deluge,CUPS-PDF, skype, vim-gnome, Gluqlo(screensaver), albert(keyboard launcher)
+CUPS-PDF, skype, albert(keyboard launcher)
 zsh with default setting + plugin(git), kakaotalk
 php xdebug + vscode
 vscode
@@ -16,13 +19,11 @@ system settings → sound → sound effects → starting sound off / leaving cin
 
 
 Change Mouse Button Modifier
-sudo apt-get install dconf-tools
+# sudo apt-get install dconf-tools
 find ‘mouse’
 wm/preference
 mouse-button-modifier -> <super> or <meta>
 
-Community driven help
-npm install -g tldr
 
 Keyboard shortcuts
 Windows->Positioning
@@ -34,21 +35,13 @@ gnome-terminal --working-directory=/home/y/code
 Super+v
 
 Server
-gnome-terminal --command="sudo /opt/lampp/server-start"
+gnome-terminal --command="sudo /home/y/code"
 Super+s
 
-pbcopy
-sudo apt-get install -y xclip
 .aliases
 alias pbcopy="xclip -sel clip"
 source ~/.zshrc
 cat .env | pbcopy
-
-Install latest mysql on Lampp
-https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-18-04
-
-sudo service mysql start/stop/restart/status
-
 
 No Password for y
 $ sudo visudo

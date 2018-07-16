@@ -1,0 +1,58 @@
+#!/bin/bash
+if [ $# -eq 0 ]; then
+    echo "No arguments provided"
+    exit 1
+fi
+
+DIR=${1//[^a-zA-Z0-9]/-}
+
+git clone https://github.com/spatie/blender.git ${DIR}
+
+cd ${DIR}
+
+mv .env.example .env
+
+sudo chmod -R 777 storage
+
+sed -i -e "s/\})\;/\})\n\t.browserSync(\'${DIR}\.test\');/" webpack.mix.js
+sed -i "/DB_PASSWORD=/c\DB_PASSWORD=root" .env
+sed -i -e "s/blender/${DIR}/g" .env
+sed -i -e 's/<\/php>/\t<env name=\"DB_CONNECTION\" value=\"sqlite\"\/>\n\t\t<env name=\"DB_DATABASE\" value=\":memory:\"\/>\n\t<\/php>/' phpunit.xml
+sed -i "/maatwebsite/d" composer.json
+sed -i -e "s/date(string \$name = '', ?string/date(\$name = \'\', /" app/Services/Html/Concerns/Forms.php
+sed -i -e "s/localhost/127\.0\.0\.1/" .env
+
+code .
+
+composer update
+
+#/etc/hosts
+sudo bash -c "cp /etc/hosts /etc/hosts.original"
+sudo bash -c "echo -e '127.0.0.1\t$DIR.test' >> /etc/hosts"
+
+#server-block
+sudo cp /etc/nginx/sites-available/server-block-template /etc/nginx/sites-available/$DIR
+sudo sed -i -e "s/template/${DIR}/g" /etc/nginx/sites-available/$DIR
+sudo ln -s /etc/nginx/sites-available/$DIR /etc/nginx/sites-enabled/
+sudo nginx -t
+sudo service nginx restart
+sudo ln -s ~/code/$DIR /var/www
+
+DIR=${DIR//[^a-zA-Z0-9]/_}
+
+mysql -uroot -proot -e "CREATE DATABASE ${DIR} CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;"
+
+composer require --dev beyondcode/laravel-dump-server
+
+php artisan migrate --seed
+
+php artisan key:generate
+
+npm install
+
+npm run dev && npm run dev
+
+rm -rf .git
+
+git init
+

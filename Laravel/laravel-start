@@ -1,0 +1,39 @@
+#!/bin/bash
+if [ $# -eq 0 ]; then
+    echo "No arguments provided"
+    exit 1
+fi
+
+laravel new $1
+
+DIR=${1//[^a-zA-Z0-9]/-}
+
+#/etc/hosts
+sudo bash -c "cp /etc/hosts /etc/hosts.original"
+sudo bash -c "echo -e '127.0.0.1\t$DIR.test' >> /etc/hosts"
+
+#server-block
+sudo cp /etc/nginx/sites-available/server-block-template /etc/nginx/sites-available/$DIR
+sudo sed -i -e "s/template/${DIR}/g" /etc/nginx/sites-available/$DIR
+sudo ln -s /etc/nginx/sites-available/$DIR /etc/nginx/sites-enabled/
+sudo nginx -t
+sudo service nginx restart
+sudo ln -s ~/code/$DIR /var/www
+
+cd $1
+
+code .
+
+sudo chmod -R 777 storage
+
+sed -i -e 's/<\/php>/\t<env name=\"DB_CONNECTION\" value=\"sqlite\"\/>\n\t\t<env name=\"DB_DATABASE\" value=\":memory:\"\/>\n\t<\/php>/g' phpunit.xml
+
+DIR=${DIR//[^a-zA-Z0-9]/_}
+
+mysql -uroot -proot -e "CREATE DATABASE ${DIR} CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;"
+
+sed -i "/DB_DATABASE=homestead/c\DB_DATABASE=${DIR}" .env
+sed -i "/DB_USERNAME=homestead/c\DB_USERNAME=root" .env
+sed -i "/DB_PASSWORD=secret/c\DB_PASSWORD=root" .env
+
+composer require --dev beyondcode/laravel-dump-server
