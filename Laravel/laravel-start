@@ -24,7 +24,8 @@ cd $1
 
 code .
 
-sudo chmod -R 777 storage
+sudo chgrp -R www-data storage bootstrap/cache
+sudo chmod -R ug+rwx storage bootstrap/cache
 
 sed -i -e 's/<\/php>/\t<env name=\"DB_CONNECTION\" value=\"sqlite\"\/>\n\t\t<env name=\"DB_DATABASE\" value=\":memory:\"\/>\n\t<\/php>/g' phpunit.xml
 
@@ -37,3 +38,17 @@ sed -i "/DB_USERNAME=homestead/c\DB_USERNAME=root" .env
 sed -i "/DB_PASSWORD=secret/c\DB_PASSWORD=root" .env
 
 composer require --dev beyondcode/laravel-dump-server
+
+php artisan make:auth
+
+cp -f /home/y/code/linux-mint-setting/Laravel/stubs/DatabaseSeeder.php database/seeds/
+cp -f /home/y/code/linux-mint-setting/Laravel/stubs/helpers.php bootstrap/
+cp -f /home/y/code/linux-mint-setting/Laravel/stubs/index.php public
+
+php artisan migrate
+
+git init
+
+git add .
+
+git commit -m 'wip'

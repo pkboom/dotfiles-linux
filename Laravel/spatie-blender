@@ -18,14 +18,20 @@ sudo nginx -t
 sudo service nginx restart
 sudo ln -s ~/code/$DIR /var/www
 
-git clone https://github.com/pkboom/blender.git ${DIR}
+git clone https://github.com/spatie/blender.git ${DIR}
 
 cd ${DIR}
 
 cp .env.example .env
 
+sed -i -e "s/nl/en/g" config/app.php
+sed -i -e "s/'en', 'en'/'en'/g" config/app.php
 sed -i -e "s/blender/${DIR}/g" .env
-sed -i -e "s/blender/${DIR}/g" webpack.mix.js
+sed -i -e "s/\})\;/\})\n\t.browserSync(\'${DIR}\.test\');/" webpack.mix.js
+sed -i -e 's/<\/php>/\t<env name=\"DB_DATABASE\" value=\":memory:\"\/>\n\t<\/php>/' phpunit.xml
+sed -i "/maatwebsite/d" composer.json
+sed -i -e "s/date(string \$name = '', ?string/date(\$name = \'\', /" app/Services/Html/Concerns/Forms.php
+sed -i -e "s/localhost/127\.0\.0\.1/" .env
 
 code .
 
@@ -35,7 +41,8 @@ DB=${DIR//[^a-zA-Z0-9]/_}
 
 mysql -uroot -proot -e "CREATE DATABASE ${DB} CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;"
 
-sed -i -e "s/DB_DATABASE=${DIR}/DB_DATABASE=${DB}" .env
+sed -i "/DB_DATABASE=${DIR}/c\DB_DATABASE=${DB}" .env
+sed -i "/DB_PASSWORD=/c\DB_PASSWORD=root" .env
 
 composer require --dev beyondcode/laravel-dump-server
 
@@ -47,8 +54,17 @@ npm install
 
 npm run dev && npm run dev
 
+rm -rf .git
+
 git init
 
 sudo chgrp -R www-data storage bootstrap/cache
 sudo chmod -R ug+rwx storage bootstrap/cache
 
+# Download Laravel/tests from github
+git clone https://github.com/laravel/laravel.git
+rm -rf tests/Concerns
+rm -rf tests/Features
+rm -rf tests/Unit
+cp laravel/tests/* tests
+rm -rf laravel

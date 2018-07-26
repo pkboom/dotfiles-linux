@@ -4,12 +4,13 @@ if [ $# -eq 0 ]; then
     exit 1
 fi
 
-rm -rf $1
+sudo rm -rf $1
 
 #/etc/hosts
 sudo sed -i "/${1}.test/d" /etc/hosts
 sudo rm /etc/nginx/sites-available/$1
 sudo rm /etc/nginx/sites-enabled/$1
+sudo rm /var/www/$1
 sudo nginx -t
 
 DIR=${1//[^a-zA-Z0-9]/_}

@@ -22,7 +22,7 @@ sudo apt-get install -y nginx
 sudo adduser $USER www-data
 
 #Laravel help script
-ln -sf ~/code/linux-mint-setting/Laravel/* ~/code/script
+ln -sf ~/code/linux-mint-setting/Laravel/* ~/code
 
 composer global require "laravel/installer"
 npm install -g tldr
