@@ -4,28 +4,13 @@ if [ $# -eq 0 ]; then
     exit 1
 fi
 
-laravel new $1
-
 DIR=${1//[^a-zA-Z0-9]/-}
 
-#/etc/hosts
-sudo bash -c "cp /etc/hosts /etc/hosts.original"
-sudo bash -c "echo -e '127.0.0.1\t$DIR.test' >> /etc/hosts"
+laravel new $1
 
-#server-block
-sudo cp /etc/nginx/sites-available/server-block-template /etc/nginx/sites-available/$DIR
-sudo sed -i -e "s/template/${DIR}/g" /etc/nginx/sites-available/$DIR
-sudo ln -s /etc/nginx/sites-available/$DIR /etc/nginx/sites-enabled/
-sudo nginx -t
-sudo service nginx restart
-sudo ln -s ~/code/$DIR /var/www
-
-cd $1
+cd $DIR
 
 code .
-
-sudo chgrp -R www-data storage bootstrap/cache
-sudo chmod -R ug+rwx storage bootstrap/cache
 
 sed -i -e 's/<\/php>/\t<env name=\"DB_CONNECTION\" value=\"sqlite\"\/>\n\t\t<env name=\"DB_DATABASE\" value=\":memory:\"\/>\n\t<\/php>/g' phpunit.xml
 
@@ -52,4 +37,4 @@ git init
 
 git add .
 
-git commit -m 'wip'
+git commit -m 'initial'
