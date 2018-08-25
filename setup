@@ -27,16 +27,10 @@ mouse-button-modifier -> <super> or <meta>
 
 Keyboard shortcuts
 Windows->Positioning
-Resize window: Meta+Alt+Right or Left
-Toggle maximization: Meta+M
 
 Terminal
 gnome-terminal --working-directory=/home/y/code
 Super+v
-
-Server
-gnome-terminal --command="sudo /home/y/code"
-Super+s
 
 .aliases
 alias pbcopy="xclip -sel clip"

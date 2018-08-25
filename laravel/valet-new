@@ -1,0 +1,39 @@
+#!/bin/bash
+if [ $# -eq 0  ] #  no argument present
+then
+    echo "No arguments provided"
+    exit 1
+fi
+
+DIR=${1//[^a-zA-Z0-9]/-}
+
+laravel new $1
+
+cd $DIR
+
+code .
+
+sed -i -e '/APP_ENV/ s/=.*/=&\n\t\t<env name=\"DB_CONNECTION\" value=\"sqlite\"\/>\n\t\t<env name=\"DB_DATABASE\" value=\":memory:\"\/>/' phpunit.xml
+
+DIR=${DIR//[^a-zA-Z0-9]/_}
+
+mysql -uroot -proot -e "CREATE DATABASE IF NOT EXISTS $DIR CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci"
+
+sed -i -e "/DB_DATABASE=/ s/=.*/=$DIR/" .env
+sed -i -e "/DB_USERNAME=/ s/=.*/=root/" .env
+sed -i -e "/DB_PASSWORD=/ s/=.*/=root/" .env
+sed -i -e "/autoload\"/ s/{/&\n\t\t\"files\": [\"bootstrap\/helpers.php\"],/" composer.json
+
+php artisan make:auth
+
+cp -f /home/y/code/linux-setup/laravel/stubs/DatabaseSeeder.php database/seeds/
+cp -f /home/y/code/linux-setup/laravel/stubs/helpers.php bootstrap/
+cp -f /home/y/code/linux-setup/laravel/stubs/TestCase.php tests
+
+php artisan migrate
+
+git init
+
+git add .
+
+git commit -m 'initial'

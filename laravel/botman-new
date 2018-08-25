@@ -6,7 +6,7 @@ fi
 
 DIR=${1//[^a-zA-Z0-9]/-}
 
-laravel new $1
+botman new $1
 
 cd $DIR
 
@@ -22,14 +22,17 @@ sed -i "/DB_DATABASE=homestead/c\DB_DATABASE=${DIR}" .env
 sed -i "/DB_USERNAME=homestead/c\DB_USERNAME=root" .env
 sed -i "/DB_PASSWORD=secret/c\DB_PASSWORD=root" .env
 
+composer update
+
 composer require --dev beyondcode/laravel-dump-server
 
 php artisan make:auth
 
-cp -f /home/y/code/linux-mint-setting/Laravel/stubs/DatabaseSeeder.php database/seeds/
-cp -f /home/y/code/linux-mint-setting/Laravel/stubs/helpers.php bootstrap/
-cp -f /home/y/code/linux-mint-setting/Laravel/stubs/index.php public
-cp -f /home/y/code/linux-mint-setting/Laravel/stubs/TestCase.php tests
+cp -f /home/y/code/linux-setup/laravel/stubs/DatabaseSeeder.php database/seeds/
+cp -f /home/y/code/linux-setup/laravel/stubs/helpers.php bootstrap/
+cp -f /home/y/code/linux-setup/laravel/stubs/index.php public
+cp -f /home/y/code/linux-setup/laravel/stubs/BotmanTestCase.php tests/TestCase.php
+cp -f /home/y/code/linux-setup/laravel/stubs/CreatesApplication.php tests
 
 php artisan migrate
 
