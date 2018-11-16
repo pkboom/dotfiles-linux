@@ -13,15 +13,15 @@ cd $DIR
 
 code .
 
-sed -i -e '/APP_ENV/ s/=.*/=&\n\t\t<env name=\"DB_CONNECTION\" value=\"sqlite\"\/>\n\t\t<env name=\"DB_DATABASE\" value=\":memory:\"\/>/' phpunit.xml
+sed -i -e '/APP_ENV=/ s/=.*/=&\n\t\t<env name=\"DB_CONNECTION\" value=\"sqlite\"\/>\n\t\t<env name=\"DB_DATABASE\" value=\":memory:\"\/>/' phpunit.xml
 
 DIR=${DIR//[^a-zA-Z0-9]/_}
 
-mysql -uroot -proot -e "CREATE DATABASE IF NOT EXISTS $DIR CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci"
+mysql -uroot -pa -e "CREATE DATABASE IF NOT EXISTS $DIR CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci"
 
 sed -i -e "/DB_DATABASE=/ s/=.*/=$DIR/" .env
 sed -i -e "/DB_USERNAME=/ s/=.*/=root/" .env
-sed -i -e "/DB_PASSWORD=/ s/=.*/=root/" .env
+sed -i -e "/DB_PASSWORD=/ s/=.*/=a/" .env
 sed -i -e "/autoload\"/ s/{/&\n\t\t\"files\": [\"bootstrap\/helpers.php\"],/" composer.json
 
 php artisan make:auth

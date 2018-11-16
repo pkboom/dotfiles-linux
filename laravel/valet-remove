@@ -8,5 +8,5 @@ sudo rm -rf $1
 
 DIR=${1//[^a-zA-Z0-9]/_}
 
-mysql -uroot -proot -e "DROP DATABASE ${DIR};"
+mysql -uroot -pa -e "DROP DATABASE ${DIR};"
 
