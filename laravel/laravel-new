@@ -1,50 +1,34 @@
 #!/bin/bash
-if [ $# -eq 0 ]; then
+if [ $# -eq 0  ] #  no argument present
+then
     echo "No arguments provided"
     exit 1
 fi
 
-laravel new $1
-
 DIR=${1//[^a-zA-Z0-9]/-}
 
-#/etc/hosts
-sudo bash -c "cp /etc/hosts /etc/hosts.original"
-sudo bash -c "echo -e '127.0.0.1\t$DIR.test' >> /etc/hosts"
+laravel new $1
 
-#server-block
-sudo cp /etc/nginx/sites-available/server-block-template /etc/nginx/sites-available/$DIR
-sudo sed -i -e "s/template/${DIR}/g" /etc/nginx/sites-available/$DIR
-sudo ln -s /etc/nginx/sites-available/$DIR /etc/nginx/sites-enabled/
-sudo nginx -t
-sudo service nginx restart
-sudo ln -s ~/code/$DIR /var/www
-
-cd $1
+cd $DIR
 
 code .
 
-sudo chgrp -R www-data storage bootstrap/cache
-sudo chmod -R ug+rwx storage bootstrap/cache
-
-sed -i -e 's/<\/php>/\t<env name=\"DB_CONNECTION\" value=\"sqlite\"\/>\n\t\t<env name=\"DB_DATABASE\" value=\":memory:\"\/>\n\t<\/php>/g' phpunit.xml
+sed -i -e '/APP_ENV=/ s/=.*/=&\n\t\t<env name=\"DB_CONNECTION\" value=\"sqlite\"\/>\n\t\t<env name=\"DB_DATABASE\" value=\":memory:\"\/>/' phpunit.xml
 
 DIR=${DIR//[^a-zA-Z0-9]/_}
 
-mysql -uroot -proot -e "CREATE DATABASE ${DIR} CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;"
+mysql -uroot -pa -e "CREATE DATABASE IF NOT EXISTS $DIR CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci"
 
-sed -i "/DB_DATABASE=homestead/c\DB_DATABASE=${DIR}" .env
-sed -i "/DB_USERNAME=homestead/c\DB_USERNAME=root" .env
-sed -i "/DB_PASSWORD=secret/c\DB_PASSWORD=root" .env
-
-composer require --dev beyondcode/laravel-dump-server
+sed -i -e "/DB_DATABASE=/ s/=.*/=$DIR/" .env
+sed -i -e "/DB_USERNAME=/ s/=.*/=root/" .env
+sed -i -e "/DB_PASSWORD=/ s/=.*/=a/" .env
+sed -i -e "/autoload\"/ s/{/&\n\t\t\"files\": [\"bootstrap\/helpers.php\"],/" composer.json
 
 php artisan make:auth
 
-cp -f /home/y/code/linux-mint-setting/Laravel/stubs/DatabaseSeeder.php database/seeds/
-cp -f /home/y/code/linux-mint-setting/Laravel/stubs/helpers.php bootstrap/
-cp -f /home/y/code/linux-mint-setting/Laravel/stubs/index.php public
-cp -f /home/y/code/linux-mint-setting/Laravel/stubs/TestCase.php tests
+cp -f /home/y/code/linux-setup/laravel/stubs/DatabaseSeeder.php database/seeds/
+cp -f /home/y/code/linux-setup/laravel/stubs/helpers.php bootstrap/
+cp -f /home/y/code/linux-setup/laravel/stubs/TestCase.php tests
 
 php artisan migrate
 
@@ -52,4 +36,4 @@ git init
 
 git add .
 
-git commit -m 'wip'
+git commit -m 'initial'
