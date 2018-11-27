@@ -26,9 +26,9 @@ sed -i -e "/autoload\"/ s/{/&\n\t\t\"files\": [\"bootstrap\/helpers.php\"],/" co
 
 php artisan make:auth
 
-cp -f /home/y/code/linux-setup/laravel/stubs/DatabaseSeeder.php database/seeds/
-cp -f /home/y/code/linux-setup/laravel/stubs/helpers.php bootstrap/
-cp -f /home/y/code/linux-setup/laravel/stubs/TestCase.php tests
+cp -f /home/y/linux-setup/laravel/stubs/DatabaseSeeder.php database/seeds/
+cp -f /home/y/linux-setup/laravel/stubs/helpers.php bootstrap/
+cp -f /home/y/linux-setup/laravel/stubs/TestCase.php tests
 
 php artisan migrate
 

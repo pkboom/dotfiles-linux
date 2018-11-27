@@ -1,4 +1,14 @@
 #!/bin/bash
+if [ $# -eq 0  ] #  no argument present
+then
+    echo "No directory provided"
+    exit 1
+fi
+
+DIR=${1//[^a-zA-Z0-9]/-}
+
+cd $DIR
+
 composer require laravel-frontend-presets/tailwindcss
 
 #php artisan preset tailwindcss
