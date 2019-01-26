@@ -21,11 +21,11 @@ sudo apt-get install -y nginx
 #Adding current user to www-data
 sudo adduser $USER www-data
 
-#Laravel help script
-ln -sf ~/code/linux-mint-setting/Laravel/* ~/code
-
 composer global require "laravel/installer"
 npm install -g tldr
 
+BACKUP=~/code/projects/linux-setup/backup
 
+cp $BACKUP/robbyrussell.zsh-theme ~/.oh-my-zsh/themes/
+cp $BACKUP/.zshrc ~/
 

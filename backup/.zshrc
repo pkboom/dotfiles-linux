@@ -1,4 +1,4 @@
-export PATH="./vendor/bin:$HOME/.composer/vendor/bin:$HOME/bin:$HOME/.local/bin:/opt/lampp/bin:$PATH"
+export PATH="./vendor/bin:$HOME/.composer/vendor/bin:$HOME/bin:$HOME/.local/bin:$HOME/code/projects/linux-setup/scripts:$PATH"
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
@@ -56,9 +56,6 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(
-  git
-)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -94,3 +91,4 @@ source ~/.aliases
 
 # xdebug configuration for vscode
 export XDEBUG_CONFIG="idekey=VSCODE"
+

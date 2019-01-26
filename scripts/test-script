@@ -1,0 +1,11 @@
+#!/bin/bash
+
+DIR=~/code/projects/linux-setup
+BACKUP=$DIR/backup
+TESTDIR=$DIR/scripts/test-dir
+
+rm -rf $TESTDIR/*
+
+cp $BACKUP/robbyrussell.zsh-theme $TESTDIR
+cp $BACKUP/.zshrc $TESTDIR
+

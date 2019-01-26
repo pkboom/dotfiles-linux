@@ -137,3 +137,5 @@ ctrl d (with results) search only filenames(you can toggle)
 Greplace
 :Gsearch search
 :Greplace replace
+
+
