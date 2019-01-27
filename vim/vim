@@ -73,6 +73,8 @@ o/O: jump between start and end of the tag block
 
 To record that action into register, press qq to start recording, perform tag jump as above (including Esc), press q to finish. Then to invoke jump, press @q.
 
+ctrl-t, ctrl-d  - indent current line forward, backwards (insert mode)
+visual > or <   - indent block by sw (repeat with . )
 
 ==================================================
 :!<shell command> trigger shell command

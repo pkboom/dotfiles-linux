@@ -19,12 +19,13 @@ DIR=${DIR//[^a-zA-Z0-9]/_}
 
 mysql -uroot -pa -e "CREATE DATABASE IF NOT EXISTS $DIR CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci"
 
+# Only if line contains baz, substitute foo with bar
+# sed '/baz/s/foo/bar/g' file.txt
 sed -i -e "/DB_DATABASE=/ s/=.*/=$DIR/" .env
 sed -i -e "/DB_USERNAME=/ s/=.*/=root/" .env
 sed -i -e "/DB_PASSWORD=/ s/=.*/=a/" .env
-sed -i -e "/autoload\"/ s/{/&\n\t\t\"files\": [\"bootstrap\/helpers.php\"],/" composer.json
 
-php artisan make:auth
+# php artisan make:auth
 
 cp -f /home/y/linux-setup/laravel/stubs/DatabaseSeeder.php database/seeds/
 cp -f /home/y/linux-setup/laravel/stubs/helpers.php bootstrap/
