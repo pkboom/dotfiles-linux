@@ -26,10 +26,10 @@ sed -i -e "/DB_USERNAME=/ s/=.*/=root/" .env
 sed -i -e "/DB_PASSWORD=/ s/=.*/=a/" .env
 
 # php artisan make:auth
-
-cp -f /home/y/linux-setup/laravel/stubs/DatabaseSeeder.php database/seeds/
-cp -f /home/y/linux-setup/laravel/stubs/helpers.php bootstrap/
-cp -f /home/y/linux-setup/laravel/stubs/TestCase.php tests
+$current='/home/y/code/projects/linux-setup/scripts/stub'
+cp -f $current/DatabaseSeeder.php database/seeds/
+#cp -f $current/helpers.php bootstrap/
+cp -f $current/TestCase.php tests
 
 php artisan migrate
 
