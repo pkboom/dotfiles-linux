@@ -1,0 +1,38 @@
+alias gp="git push"
+alias gs="git status"
+alias gc="git commit -m"
+alias ga="git add ."
+alias nah="git reset --hard && git clean -df"
+alias wip="git add . && git commit -m 'wip'"
+alias gl='git log --decorate --oneline --graph --all'
+alias gch='git checkout'
+alias dev='npm run dev'
+alias watch='npm run watch'
+
+alias pbcopy='xclip -sel clip'
+
+curll() { curl http://localhost:8000/$1 }
+web() { cd /home/y/code && ls; }
+art() {
+    if [ -n "$1" ]; then # If command line argument is present
+        if [ $1 = "tinker" ]; then
+            rlwrap php artisan tinker
+        elif [ $1 = "fresh" ]; then
+            php artisan migrate:fresh --seed
+        else
+            php artisan $@
+        fi
+        return
+    fi
+
+    php artisan
+}
+
+dir=${PWD##*/}
+if [ "code" = "$dir" ] || [ "projects" = "$dir" ]; then
+    ls
+fi
+
+composer-link() {  
+    composer config repositories.local '{"type": "path", "url": "'$1'"}' --file composer.json
+}
