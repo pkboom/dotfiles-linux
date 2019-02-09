@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Name=Laravel
+Exec=/usr/bin/google-chrome-stable https://laravel.com/docs
+Icon=google-chrome
+Terminal=false
+Type=Application
+Categories=Network;
