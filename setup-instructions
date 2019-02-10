@@ -7,15 +7,18 @@ icons/Mint-x/apps/96/comix.svg
 
 
 software manager
-CUPS-PDF, skype, albert(keyboard launcher)
-zsh with default setting + plugin(git), kakaotalk
-php xdebug + vscode
+
+albert
+https://albertlauncher.github.io/docs/installing/
+zsh with default setting + plugin(git)
+oh-my-zsh
+kakaotalk
 vscode
+php xdebug
 terminal font - inconsolata
+cairo-clock
 
 system settings → sound → sound effects → starting sound off / leaving cinnamon off
-
-리눅스에서 카카오톡
 
 
 Change Mouse Button Modifier
@@ -26,11 +29,15 @@ mouse-button-modifier -> <super> or <meta>
 
 
 Keyboard shortcuts
-Windows->Positioning
-
-Terminal
-gnome-terminal --working-directory=/home/y/code
-Super+v
+Windows->
+Positioning->
+Toggle maximization state: Super+Up
+Move window to right edge: Alt + Super + Right
+Move window to top edge: Alt + Super + Up
+Move window to left edge: Alt + Super + Left
+Move window to bottom edge: Alt + Super + Down
+Inter-monitor->Move window to right monitor: Super+Right
+Inter-monitor->Move window to left monitor: Super+Left
 
 .aliases
 alias pbcopy="xclip -sel clip"
@@ -40,5 +47,7 @@ cat .env | pbcopy
 No Password for y
 $ sudo visudo
 y ALL=(ALL) NOPASSWD: ALL
+
+ln -s ~/code/projects/linux-setup ~/linux
 
 

@@ -1,7 +1,0 @@
-[Desktop Entry]
-Version=1.0
-Name=Web
-Exec=gnome-terminal --working-directory=/home/y/code
-Icon=utilities-terminal
-Type=Application
-Categories=GNOME;GTK;System;TerminalEmulator;
