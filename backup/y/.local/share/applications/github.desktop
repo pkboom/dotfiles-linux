@@ -1,8 +1,0 @@
-[Desktop Entry]
-Version=1.0
-Name=Github
-Exec=/usr/bin/google-chrome-stable https://github.com/pkboom?tab=repositories
-Icon=/home/y/.icons/github.svg
-Terminal=false
-Type=Application
-Categories=Network;
