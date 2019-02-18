@@ -13,7 +13,7 @@ cd $DIR
 
 code .
 
-sed -i -e '/APP_ENV=/ s/=.*/=&\n\t\t<env name=\"DB_CONNECTION\" value=\"sqlite\"\/>\n\t\t<env name=\"DB_DATABASE\" value=\":memory:\"\/>/' phpunit.xml
+sed -i -e '/APP_ENV/ s/APP_ENV.*/&\n\t\t<env name=\"DB_CONNECTION\" value=\"sqlite\"\/>\n\t\t<env name=\"DB_DATABASE\" value=\":memory:\"\/>\n\t\t<env name=\"TELESCOPE_ENABLED\" value=\"false\"\/>/' phpunit.xml
 
 DIR=${DIR//[^a-zA-Z0-9]/_}
 

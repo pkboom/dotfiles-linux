@@ -1,4 +1,7 @@
-code.desktop: NoDisplay=true added
+NoDisplay=true
+code.desktop
+mintwelcome.desktop
+google-chrome.desktop
+gnome-terminal.desktop
 firefox.desktop: Firefox Web Browser -> Firefox Browser
-mintwelcome.desktop: NoDisplay=true added
 
