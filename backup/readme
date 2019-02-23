@@ -1,7 +1,3 @@
-NoDisplay=true
-code.desktop
-mintwelcome.desktop
-google-chrome.desktop
-gnome-terminal.desktop
 firefox.desktop: Firefox Web Browser -> Firefox Browser
+
 

@@ -5,9 +5,6 @@ Quit window
 gnome-session-quit --power-off
 icons/Mint-x/apps/96/comix.svg
 
-
-software manager
-
 albert
 https://albertlauncher.github.io/docs/installing/
 zsh with default setting + plugin(git)
@@ -47,7 +44,5 @@ cat .env | pbcopy
 No Password for y
 $ sudo visudo
 y ALL=(ALL) NOPASSWD: ALL
-
-ln -s ~/code/projects/linux-setup ~/linux
 
 
