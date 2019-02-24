@@ -1,4 +1,7 @@
-install composer
+run install.sh
+zsh with default setting + plugin(git)
+install oh-my-zsh
+run link.sh
 install nodejs & npm
 
 Quit window
@@ -7,8 +10,6 @@ icons/Mint-x/apps/96/comix.svg
 
 albert
 https://albertlauncher.github.io/docs/installing/
-zsh with default setting + plugin(git)
-oh-my-zsh
 kakaotalk
 vscode
 php xdebug
@@ -17,13 +18,11 @@ cairo-clock
 
 system settings → sound → sound effects → starting sound off / leaving cinnamon off
 
-
 Change Mouse Button Modifier
-# sudo apt-get install dconf-tools
+sudo apt-get install dconf-tools
 find ‘mouse’
 wm/preference
 mouse-button-modifier -> <super> or <meta>
-
 
 Keyboard shortcuts
 Windows->
@@ -36,10 +35,7 @@ Move window to bottom edge: Alt + Super + Down
 Inter-monitor->Move window to right monitor: Super+Right
 Inter-monitor->Move window to left monitor: Super+Left
 
-.aliases
-alias pbcopy="xclip -sel clip"
 source ~/.zshrc
-cat .env | pbcopy
 
 No Password for y
 $ sudo visudo
