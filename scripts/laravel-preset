@@ -11,11 +11,14 @@ cd $DIR
 
 composer require laravel-frontend-presets/tailwindcss
 
-#php artisan preset tailwindcss
-php artisan preset tailwindcss-auth
+php artisan preset tailwindcss
+#php artisan preset tailwindcss-auth
 
 npm install && npm run dev && npm run dev
 npm install && npm run dev && npm run dev
 
 sed -i -e "s/purgeCss()/purgeCss()\n\t\.browserSync(\'${PWD##*/}\.test\')/g" webpack.mix.js
+
+rm tailwind.js
+npx tailwind init tailwind.js
 
