@@ -4,7 +4,9 @@ echo "Setting up your Linux..."
 
 sudo apt-get update
 
-#curl -sS https://getcomposer.org/installer | php
+curl -sS https://getcomposer.org/installer | php
+
+# sudo mv composer.phar /usr/local/bin/composer
 
 composer global require laravel/installer
 composer global require cpriego/valet-linux
