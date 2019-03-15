@@ -1,13 +1,19 @@
 #!/bin/bash
-if [ $# -eq 0  ] #  no argument present
+
+read -p "Are you in the project? (n/y) " -n 1 -r
+
+echo
+
+if [[ ! $REPLY =~ ^[Yy]$ ]]
 then
-    echo "No directory provided"
-    exit 1
+    read -p "Folder name ($package_name): " folder_name
+
+    dir=${folder_name//[^a-zA-Z0-9]/-}
+
+    cd $dir
 fi
 
-DIR=${1//[^a-zA-Z0-9]/-}
-
-cd $DIR
+echo
 
 composer require laravel-frontend-presets/tailwindcss
 

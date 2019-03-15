@@ -5,31 +5,32 @@ then
     exit 1
 fi
 
-DIR=${1//[^a-zA-Z0-9]/-}
+dir=${1//[^a-zA-Z0-9]/-}
 
 laravel new $1
 
-cd $DIR
+cd $dir
 
 code .
 
 sed -i -e '/APP_ENV/ s/APP_ENV.*/&\n\t\t<env name=\"DB_CONNECTION\" value=\"sqlite\"\/>\n\t\t<env name=\"DB_DATABASE\" value=\":memory:\"\/>\n\t\t<env name=\"TELESCOPE_ENABLED\" value=\"false\"\/>/' phpunit.xml
 
-DIR=${DIR//[^a-zA-Z0-9]/_}
+dir=${dir//[^a-zA-Z0-9]/_}
 
-mysql -uroot -pa -e "CREATE DATABASE IF NOT EXISTS $DIR CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci"
+mysql -u root -pa -e "CREATE DATABASE IF NOT EXISTS $dir CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci"
 
 # Only if line contains baz, substitute foo with bar
 # sed '/baz/s/foo/bar/g' file.txt
-sed -i -e "/DB_DATABASE=/ s/=.*/=$DIR/" .env
+sed -i -e "/DB_DATABASE=/ s/=.*/=$dir/" .env
 sed -i -e "/DB_USERNAME=/ s/=.*/=root/" .env
 sed -i -e "/DB_PASSWORD=/ s/=.*/=a/" .env
 
 # php artisan make:auth
-$current='/home/y/code/projects/linux-setup/scripts/stub'
-cp -f $current/DatabaseSeeder.php database/seeds/
+stub="$HOME/linux-setup/scripts/stubs"
+cp -f $stub/DatabaseSeeder.php database/seeds/
 #cp -f $current/helpers.php bootstrap/
-cp -f $current/TestCase.php tests
+cp -f $stub/TestCase.php tests/
+cp -f $stub/.idea .
 
 php artisan migrate
 
