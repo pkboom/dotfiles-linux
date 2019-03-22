@@ -14,15 +14,13 @@ gnome-session-quit --power-off
 
 icons/Mint-x/apps/96/comix.svg
 
-albert
-
-https://albertlauncher.github.io/docs/installing/
+albert https://albertlauncher.github.io/docs/installing/
 
 kakaotalk
 
 vscode
 
-php xdebug
+xdebug https://xdebug.org/wizard.php
 
 terminal font - inconsolata
 
@@ -42,19 +40,9 @@ mouse-button-modifier -> <super> or <meta>
 
 Keyboard shortcuts
 
-Windows->Positioning->Toggle maximization state: Super+Up
-
-Move window to right edge: Alt + Super + Right
-
-Move window to top edge: Alt + Super + Up
-
-Move window to left edge: Alt + Super + Left
-
-Move window to bottom edge: Alt + Super + Down
-
-Inter-monitor->Move window to right monitor: Super+Right
-
-Inter-monitor->Move window to left monitor: Super+Left
+Windows->Toggle maximization
+Windows->Positioning
+Windows->Tiling and Snapping->Push snap
 
 source ~/.zshrc
 

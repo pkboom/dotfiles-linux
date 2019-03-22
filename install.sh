@@ -10,7 +10,7 @@ curl -sS https://getcomposer.org/installer | php
 
 # in case you need to remove php
 # sudo apt-get purge php-common
-sudo apt-get install php-mbstring php-sqlite3 php-xml php-gd php-zip php-curl php-mysql php-cli php php-fpm
+sudo apt-get install php-mbstring php-sqlite3 php-xml php-gd php-zip php-curl php-mysql php-cli php php-fpm php-bcmath
 
 composer global require laravel/installer
 composer global require cpriego/valet-linux
