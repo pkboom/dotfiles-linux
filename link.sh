@@ -12,3 +12,5 @@ ln -s $HOME/linux-setup/dotfiles/robbyrussell.zsh-theme $HOME/.oh-my-zsh/themes/
 rm -f $HOME/.local/share/applications/web.desktop
 ln -s $HOME/linux-setup/dotfiles/web.desktop $HOME/.local/share/applications/web.desktop
 
+rm -f /etc/environment
+ln -s $HOME/linux-setup/dotfiles/environment /etc/environment
