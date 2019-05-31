@@ -6,9 +6,9 @@ export PATH="$HOME/linux-setup/scripts:$PATH"
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
-ZSH_THEME="robbyrussell"
-
 source $ZSH/oh-my-zsh.sh
+
+source "$HOME/robbyrussell2.zsh-theme"
 
 source ~/.aliases 
 

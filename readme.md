@@ -1,10 +1,10 @@
 run `install.sh`
 
-zsh with default setting + plugin(git)
-
 install oh-my-zsh
 
 run `link.sh`
+
+source ~/.zshrc
 
 install nodejs & npm
 
@@ -30,8 +30,8 @@ system settings → sound → sound effects → starting sound off / leaving cin
 
 Change Mouse Button Modifier
 
-sudo apt-get install dconf-tools
-
+// sudo apt-get install dconf-tools
+run dconf-tools
 find ‘mouse’
 
 wm/preference
@@ -44,7 +44,6 @@ Windows->Toggle maximization
 Windows->Positioning
 Windows->Tiling and Snapping->Push snap
 
-source ~/.zshrc
 
 No Password for y
 

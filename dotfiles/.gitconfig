@@ -1,0 +1,14 @@
+[user]
+	name = Keunbae Park
+	email = ppotpo@gmail.com
+[color]
+	ui = auto
+[merge]
+	confilctstyle = diff3
+[core]
+	editor = gvim -f
+	excludesfile = /home/y/.gitignore_global
+[credetial]
+	helper = cache
+[push]
+	default = simple

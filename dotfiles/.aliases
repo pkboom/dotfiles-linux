@@ -3,17 +3,14 @@ alias gs="git status"
 alias gc="git commit -m"
 alias ga="git add ."
 alias nah="git reset --hard && git clean -df"
-alias wip="git add . && git commit -m 'wip'"
 alias gl='git log --decorate --oneline --graph --all'
 alias gch='git checkout'
 alias dev='npm run dev'
 alias watch='npm run watch'
-
 alias pbcopy='xclip -sel clip'
 
 web() { cd /home/y/code && ls -lh; }
 linux() { cd $HOME/linux-setup && ls -lh; }
-school() { cd /home/y/code/school && ls -lh; }
 art() {
     if [ -n "$1" ]; then # If command line argument is present
         if [ $1 = "tinker" ]; then
@@ -48,6 +45,13 @@ package-new() {
     else
         echo 'You need a package name'
     fi
+}
 
+wip() {
+    if [ "$1" = "up" ]; then # If command line argument is present
+        git add . && git commit -m 'wip' && git push
+    else
+        git add . && git commit -m 'wip'
+    fi
 }
 
