@@ -1,7 +1,7 @@
 #!/bin/bash
 if [ $# -eq 0  ] #  no argument present
 then
-    echo "No arguments provided"
+    echo "No project name provided"
     exit 1
 fi
 
@@ -26,13 +26,12 @@ sed -i -e "/DB_USERNAME=/ s/=.*/=root/" .env
 sed -i -e "/DB_PASSWORD=/ s/=.*/=a/" .env
 
 # php artisan make:auth
-stub="$HOME/linux-setup/scripts/stubs"
+stub="$HOME/.dotfiles/scripts/stubs"
 cp -f $stub/DatabaseSeeder.php database/seeds/
 #cp -f $current/helpers.php bootstrap/
-cp -f $stub/TestCase.php tests/
 cp -f $stub/.idea .
 
-php artisan migrate
+php artisan migrate:fresh --seed
 
 git init
 
