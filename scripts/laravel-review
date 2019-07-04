@@ -1,4 +1,5 @@
 #!/bin/bash
+
 if [ $# -eq 0  ] #  no argument present
 then
     echo "No project name provided"
@@ -7,13 +8,11 @@ fi
 
 dir=${1//[^a-zA-Z0-9]/-}
 
-laravel new $1
-
 cd $dir
 
-code .
+cp .env.example .env
 
-sed -i -e '/APP_ENV/ s/APP_ENV.*/&\n\t\t<env name=\"DB_CONNECTION\" value=\"sqlite\"\/>\n\t\t<env name=\"DB_DATABASE\" value=\":memory:\"\/>\n\t\t<env name=\"TELESCOPE_ENABLED\" value=\"false\"\/>/' phpunit.xml
+code .
 
 dir=${dir//[^a-zA-Z0-9]/_}
 
@@ -25,25 +24,11 @@ sed -i -e "/DB_DATABASE=/ s/=.*/=$dir/" .env
 sed -i -e "/DB_USERNAME=/ s/=.*/=root/" .env
 sed -i -e "/DB_PASSWORD=/ s/=.*/=a/" .env
 
-# php artisan make:auth
 stub="$HOME/.dotfiles/scripts/stubs"
-cp -f $stub/DatabaseSeeder.php database/seeds/
-#cp -f $current/helpers.php bootstrap/
 cp -f $stub/.idea .
 cp -f $stub/.workflow .
 
-echo .idea >> .gitignore
-echo .vscode >> .gitignore
-
-composer require laravel/telescope
-php artisan telescope:install
-
+composer install
+php artisan key:generate
 php artisan migrate:fresh --seed
-
-git init
-
-git add .
-
-git commit -m 'initial'
-
 npm install
