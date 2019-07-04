@@ -62,3 +62,9 @@ enable
 sudo phpenmod xdebug 
 sudo service php7.2-fpm restart
 
+
+Install php-redis (ext-redis)
+install redis
+install pecl
+install php-xml if not installed
+sudo apt-get install php-redis

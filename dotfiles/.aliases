@@ -10,7 +10,7 @@ alias watch='npm run watch'
 alias pbcopy='xclip -sel clip'
 
 web() { cd /home/y/code && ls -lh; }
-linux() { cd $HOME/linux-setup && ls -lh; }
+dotfiles() { cd $HOME/.dotfiles && ls -lh; }
 art() {
     if [ -n "$1" ]; then # If command line argument is present
         if [ $1 = "tinker" ]; then
@@ -53,5 +53,14 @@ wip() {
     else
         git add . && git commit -m 'wip'
     fi
+}
+
+# https://alexvanderbist.com/posts/2019/running-laravel-scheduler-without-setting-up-cron
+function scheduler () {
+    while :; do
+        php artisan schedule:run
+    	echo "Sleeping 60 seconds..."
+        sleep 60
+    done
 }
 
