@@ -3,7 +3,7 @@
 # -n NUM: read returns after reading num characters rather than waiting for a complete line of input.
 # -p PROMPT: display PROMPT, without a trailing newline, before attempting to read any input. The prompt is displayed only if input is coming from a terminal.
 # -r: If this option is given, backslash does not act as an escape character. The backslash is considered to be part of the line. In particular, a backslash-newline pair may not be used as a line continuation.
-read -p "Are you in the project? (n/y) " -n 1 -r
+read -p "Are you in the project? (y/n) " -n 1 -r
 
 echo
 
