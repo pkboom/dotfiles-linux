@@ -1,5 +1,8 @@
 run `install.sh`
 
+install brew
+https://docs.brew.sh/Homebrew-on-Linux
+
 install oh-my-zsh
 
 run `link.sh`
