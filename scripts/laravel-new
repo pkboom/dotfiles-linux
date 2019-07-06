@@ -28,9 +28,9 @@ sed -i -e "/DB_PASSWORD=/ s/=.*/=a/" .env
 # php artisan make:auth
 stub="$HOME/.dotfiles/scripts/stubs"
 cp -f $stub/DatabaseSeeder.php database/seeds/
-#cp -f $current/helpers.php bootstrap/
+cp -f $stub/phpunit.xml .
 cp -f $stub/.idea .
-cp -f $stub/.workflow .
+touch .workflow
 
 echo .idea >> .gitignore
 echo .vscode >> .gitignore
