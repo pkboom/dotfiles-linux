@@ -10,7 +10,7 @@ source $ZSH/oh-my-zsh.sh
 
 source $HOME/robbyrussell2.zsh-theme
 
-source ~/.aliases 
+source ~/aliases.zsh 
 
 # xdebug configuration for vscode
 export XDEBUG_CONFIG="idekey=VSCODE"
