@@ -8,9 +8,13 @@ export ZSH=$HOME/.oh-my-zsh
 
 source $ZSH/oh-my-zsh.sh
 
-source $HOME/robbyrussell2.zsh-theme
+export Dotfiles=$HOME/.dotfiles/dotfiles
 
-source ~/aliases.zsh 
+source $Dotfiles/robbyrussell2.zsh-theme
+
+source $Dotfiles/aliases.zsh 
 
 # xdebug configuration for vscode
 export XDEBUG_CONFIG="idekey=VSCODE"
+
+sudo service postgresql start

@@ -70,5 +70,6 @@ function greview () {
     git fetch --prune
     git merge
     git checkout $current
-    git pull
+    git pull -f
+    git rebase master
 }
