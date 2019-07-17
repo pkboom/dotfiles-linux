@@ -1,30 +1,23 @@
+# JS
+alias nfresh="rm -rf node_modules/ package-lock.json && npm install"
+alias watch="npm run watch"
+alias dev='npm run dev'
+
+# Git
 alias gp="git push"
 alias gs="git status"
 alias gc="git commit -m"
 alias ga="git add ."
-alias nah="git reset --hard && git clean -df"
 alias gl='git log --decorate --oneline --graph --all'
 alias gch='git checkout'
-alias dev='npm run dev'
-alias watch='npm run watch'
+alias gchm='git checkout master'
+alias gbase='git rebase'
+alias gbasem='git rebase master'
+alias gb="git branch"
+alias gclone="git clone"
+alias nah="git reset --hard && git clean -df"
+
 alias pbcopy='xclip -sel clip'
-
-web() { cd /home/y/code && ls -lh; }
-dotfiles() { cd $HOME/.dotfiles && ls -lh; }
-art() {
-    if [ -n "$1" ]; then # If command line argument is present
-        if [ $1 = "tinker" ]; then
-            rlwrap php artisan tinker
-        elif [ $1 = "fresh" ]; then
-            php artisan migrate:fresh --seed
-        else
-            php artisan $@
-        fi
-        return
-    fi
-
-    php artisan
-}
 
 DIR=${PWD##*/}
 if [ "code" = "$DIR" ] || [ "projects" = "$DIR" ]; then
@@ -54,6 +47,25 @@ wip() {
         git add . && git commit -m 'wip'
     fi
 }
+
+web() { cd /home/y/code && ls -lh; }
+dotfiles() { cd $HOME/.dotfiles && ls -lh; }
+
+art() {
+    if [ -n "$1" ]; then # If command line argument is present
+        if [ $1 = "tinker" ]; then
+            rlwrap php artisan tinker
+        elif [ $1 = "fresh" ]; then
+            php artisan migrate:fresh --seed
+        else
+            php artisan $@
+        fi
+        return
+    fi
+
+    php artisan
+}
+
 
 # https://alexvanderbist.com/posts/2019/running-laravel-scheduler-without-setting-up-cron
 function scheduler () {
