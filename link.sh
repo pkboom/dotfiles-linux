@@ -16,3 +16,5 @@ ln -s $Dotfiles/.gitignore_global $HOME/.gitignore_global
 
 sudo rm -f /etc/environment
 sudo ln -s $Dotfiles/environment /etc/environment
+
+git config --global core.excludesfile $HOME/.gitignore_global
