@@ -1,0 +1,31 @@
+#!/bin/bash
+
+sudo apt-get update
+sudo apt-get install deluge
+sudo apt-get install -y vim-gnome 
+sudo apt-add-repository ppa:alexanderk23/ppa
+sudo apt-get install -y gluqlo
+sudo apt-get upgrade
+sudo apt-get install -y zsh
+#Change Mouse Button Modifier
+sudo apt-get install -y dconf-tools
+#pbcopy
+sudo apt-get install -y xclip
+
+#mysql
+sudo apt-get install -y mysql-server
+mysql_secure_installation
+
+#nginx
+sudo apt-get install -y nginx
+#Adding current user to www-data
+sudo adduser $USER www-data
+
+composer global require "laravel/installer"
+npm install -g tldr
+
+BACKUP=~/code/projects/linux-setup/backup
+
+cp $BACKUP/robbyrussell.zsh-theme ~/.oh-my-zsh/themes/
+cp $BACKUP/.zshrc ~/
+

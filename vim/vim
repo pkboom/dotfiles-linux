@@ -1,0 +1,143 @@
+:e <filename> edit file
+:e . show files in current working directory
+
+:wa save all file
+
+"+p copy from clipboard
+"+y paste to clipboard
+
+yiw – yank the current word (excluding surrounding whitespace)
+yaw – yank the current word (including leading or trailing whitespace)
+
+zz move your cursor to center
+<line#>G jump to line #
+g; go to lasted edit position
+g' opposite to g;
+:help changelist
+
+d0 delete to the beginning of a line.
+d$ delete to the end of a line.
+di( or di) delete everything inside () delete inside ()
+di' delete everything inside ''
+ci' change inside ''
+vi' select inside ''
+
+:so % source(read file) %(current file)
+
+:bd delete a buffer
+:bufdo! bd
+bufdo run command in every buffer
+! run no matter what
+
+fo find o in the line to the right
+Fo find o in the line to the left
+; repeat search
+
+% jump to matching bracket or parenthesis
+
+. repeat the last change in normal and insert mode
+
+30i<something><esc> insert something 30 times
+							
+* find the next occurence of the word under cursor
+# find the previous
+
+ctrl ^ go back to previous buffer(it toggles)
+:bp same but it goes back up the buffer list
+
+:%y+ copy all text to clipboard
+% entire page 
+y yank
++ copy to the clipboard
+
+grep -R 'John Doe' ./ grep 'John doe' recusively from current dir with line
+
+:marks show marks
+m + [any key] bookmark
+' + [any key] return there 
+
+d'm delete from here to bookmark 'm'
+v'm select from here to bookmark 'm'
+c'm change from here to bookmark 'm'
+
+q[any key] macro start with any key
+q macro stops in normal mode
+@[any key] repeat macro
+:reg show all registers
+"qp in normal mode => paste register "q
+in .vimrc
+let @q=""qp" paste register q and assign it to @q
+
+vat, vit: selct a tag block
+o/O: jump between start and end of the tag block
+
+To record that action into register, press qq to start recording, perform tag jump as above (including Esc), press q to finish. Then to invoke jump, press @q.
+
+ctrl-t, ctrl-d  - indent current line forward, backwards (insert mode)
+visual > or <   - indent block by sw (repeat with . )
+
+==================================================
+:!<shell command> trigger shell command
+:!ctags -R run ctags recusively
+ctags option
+:tn tag next
+:tp teg previous
+:ts select from all tags available
+:tabe[dit] <filename> open a new tab
+:tabn[ew] === :tabe open new tab
+:tabc[lose] close a tab
+gt === tabnext
+gT === tabprevious
+:tabo close the other tabs
+ctrl w |(shift \) maximize the split
+ctrl w = back to normal size
+ctrl w o current buffer full screen
+:%s/search/replace/g search and replace in the entire page
+:[a,b]s/search/replace/gc search and replace with confirmation between line a and b
+:.-5,$s/search/replace/gc from 5 lines above the cursor to the bottom of the file do replace
+<select in visual mode> + s/search/replace replace inside the selection
+:%s/\/opt\/lampp\/htdoc/\/Homestead\/code   
+
+ctrl d / ctrl t indent current line left / right
+< / > in visual mode indent block (repeat with .)
+
+:!rm % delete the current file
+
+---------------------------------------------------------
+imap: mapping for insert mode 
+nmap: mapping for normal mode 
+nnoremap: non recursive mapp for normal mode
+
+install colorscheme plugin
+~/.vim/colors 
+wget raw.github-address
+
+
+Vundle plugin manager
+:PluginInstall install plugins
+
+plugins
+
+vinegar
+- show current files in the working directory
+hit - again -> show parent directory
+d create a directory in folder mode
+D delete a directory or file underneath a cursor
+% create a new file
+
+nerdtree(usuall just for the birds eye view)
+:NERDTreeToggle show filetree
+? show help
+
+ctrlp.vim(install exuberant-ctags)
+:CtrlP
+:CtrlPBufTag
+:CtrlPMRUFiles
+ctrl d (with results) search only filenames(you can toggle)
+
+
+Greplace
+:Gsearch search
+:Greplace replace
+
+

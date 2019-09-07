@@ -1,0 +1,21 @@
+#!/bin/bash
+if [ $# -eq 0 ]; then
+    echo "No arguments provided"
+    exit 1
+fi
+
+rm -rf $1
+
+#/etc/hosts
+sudo sed -i "/${1}.test/d" /etc/hosts
+
+#httpd-vhosts.conf
+VHOSTSFILE="/opt/lampp/etc/extra/httpd-vhosts.conf"
+sudo sed -i "/\#${1}/d" $VHOSTSFILE
+sudo sed -i "/${1}.test/d" $VHOSTSFILE
+sudo sed -i "/${1}\/public/d" $VHOSTSFILE
+
+DIR=${1//[^a-zA-Z0-9]/_}
+
+mysql -uroot -proot -e "DROP DATABASE ${DIR};"
+
