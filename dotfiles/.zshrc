@@ -1,5 +1,5 @@
 export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
-export PATH="$HOME/.composer/vendor/bin:$PATH"
+export PATH="$HOME/.config/composer/vendor/bin:$PATH"
 export PATH="vendor/bin:$PATH"
 export PATH="$HOME/.dotfiles/scripts:$PATH"
 
