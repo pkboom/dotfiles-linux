@@ -47,24 +47,11 @@ Windows->Toggle maximization
 Windows->Positioning
 Windows->Tiling and Snapping->Push snap
 
-
 No Password for y
 
-$ sudo visudo
+\$ sudo visudo
 
 y ALL=(ALL) NOPASSWD: ALL
-
-Disable xdeubg
-sudo phpdismod xdebug 
-sudo service php7.2-fpm restart
-
-check the status
-sudo phpquery -v 7.2 -s fpm -m xdebug
-
-enable
-sudo phpenmod xdebug 
-sudo service php7.2-fpm restart
-
 
 Install php-redis (ext-redis)
 install redis
