@@ -33,8 +33,10 @@ system settings → sound → sound effects → starting sound off / leaving cin
 
 Change Mouse Button Modifier
 
-// sudo apt-get install dconf-tools
-run dconf-tools
+sudo apt-get install dconf-tools
+
+run dconf edit
+
 find ‘mouse’
 
 wm/preference
@@ -58,3 +60,15 @@ install redis
 install pecl
 install php-xml if not installed
 sudo apt-get install php-redis
+
+### key mapping
+
+```
+cd /usr/share/X11/xkb/symbols/t
+cp pc pc_backup
+sudo gvim pc
+
+    key <LCTL> {	[ Super_L		]	};
+    key <LWIN> {	[ NoSymbol, Alt_L   ]	};
+    key <LALT>  {	[ Control_L ]	};
+```
