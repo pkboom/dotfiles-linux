@@ -72,3 +72,5 @@ sudo gvim pc
     key <LWIN> {	[ NoSymbol, Alt_L   ]	};
     key <LALT>  {	[ Control_L ]	};
 ```
+
+Reboot
