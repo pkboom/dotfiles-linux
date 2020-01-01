@@ -11,10 +11,8 @@ alias ga="git add ."
 alias gl='git log --decorate --oneline --graph --all'
 alias gch='git checkout'
 alias gchm='git checkout master'
-alias gbase='git rebase'
-alias gbasem='git rebase master'
 alias gb="git branch"
-alias gclone="git clone"
+alias gbd="git branch -D"
 alias nah="git reset --hard && git clean -df"
 
 alias pbcopy='xclip -sel clip'
@@ -76,12 +74,20 @@ function scheduler () {
     done
 }
 
-function greview () {
-    current=`git symbolic-ref --short HEAD`
+function gupdate () {
     git checkout master
+    git pull
     git fetch --prune
-    git merge
-    git checkout $current
-    git pull -f
-    git rebase master
+    // gb -D asdf
+    gch -b asdf
+}
+
+function weather() {
+   city="$1"
+
+   if [ -z "$city" ]; then
+      city="Hamilton"
+   fi
+
+   eval "curl http://wttr.in/${city}"
 }
