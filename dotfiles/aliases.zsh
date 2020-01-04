@@ -74,14 +74,6 @@ function scheduler () {
     done
 }
 
-function gupdate () {
-    git checkout master
-    git pull
-    git fetch --prune
-    // gb -D asdf
-    gch -b asdf
-}
-
 function weather() {
    city="$1"
 
