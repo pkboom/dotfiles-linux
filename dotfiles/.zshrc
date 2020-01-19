@@ -4,13 +4,15 @@ export PATH="vendor/bin:$PATH"
 export PATH="$HOME/.dotfiles/scripts:$PATH"
 
 # Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
+ZSH=$HOME/.oh-my-zsh
+
+ZSH_CUSTOM=$HOME/.dotfiles/misc/oh-my-zsh-custom
+
+ZSH_THEME="robbyrussell2"
+
+plugins=(git laravel4 laravel5 composer osx vagrant)
 
 source $ZSH/oh-my-zsh.sh
-
-export Dotfiles=$HOME/.dotfiles/dotfiles
-
-source $Dotfiles/robbyrussell2.zsh-theme
 
 source $Dotfiles/aliases.zsh 
 
