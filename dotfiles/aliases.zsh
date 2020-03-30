@@ -64,7 +64,6 @@ art() {
     php artisan
 }
 
-
 # https://alexvanderbist.com/posts/2019/running-laravel-scheduler-without-setting-up-cron
 function scheduler () {
     while :; do

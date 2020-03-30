@@ -14,7 +14,7 @@ plugins=(git laravel4 laravel5 composer osx vagrant)
 
 source $ZSH/oh-my-zsh.sh
 
-source $Dotfiles/aliases.zsh 
+source $HOME/.dotfiles/dotfiles/aliases.zsh
 
 # xdebug configuration for vscode
 export XDEBUG_CONFIG="idekey=VSCODE"
