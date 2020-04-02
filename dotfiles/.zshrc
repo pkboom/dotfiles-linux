@@ -18,5 +18,3 @@ source $HOME/.dotfiles/dotfiles/aliases.zsh
 
 # xdebug configuration for vscode
 export XDEBUG_CONFIG="idekey=VSCODE"
-
-sudo service postgresql start
