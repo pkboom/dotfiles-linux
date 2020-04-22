@@ -1,3 +1,0 @@
-#!/bin/bash
-
-sudo ln -sf ~/.dotfiles/php_without_xdebug.ini /etc/php/7.3/cli/php.ini
