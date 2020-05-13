@@ -23,7 +23,7 @@ if [ "code" = "$DIR" ] || [ "projects" = "$DIR" ]; then
 fi
 
 composer-link() {  
-    composer config repositories.local '{"type": "path", "url": "'$1'"}'
+    composer config repositories.$1 '{"type": "path", "url": "../packages/'$1'"}'
 }
 
 package-new() {
