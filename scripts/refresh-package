@@ -1,0 +1,8 @@
+#!/bin/sh
+
+if [ -n "$1" ]; then # If command line argument is present
+    git reset --hard && git clean -df
+    
+    composer require $1
+fi
+

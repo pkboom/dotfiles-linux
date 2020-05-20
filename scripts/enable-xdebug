@@ -1,0 +1,8 @@
+#!/bin/bash
+
+dir="/etc/php/7.4/cli/conf.d/20-xdebug.ini"
+
+sudo sh -c "cat << 'EOF' > $dir
+zend_extension = /usr/lib/php/20190902/xdebug.so
+xdebug.remote_enable=1
+EOF"
