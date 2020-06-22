@@ -1,27 +1,3 @@
-# JS
-alias nfresh="rm -rf node_modules/ package-lock.json && npm install"
-alias watch="npm run watch"
-alias dev='npm run dev'
-
-# Git
-alias gp="git push"
-alias gs="git status"
-alias gc="git commit -m"
-alias ga="git add ."
-alias gl='git log --decorate --oneline --graph --all'
-alias gch='git checkout'
-alias gchm='git checkout master'
-alias gb="git branch"
-alias gbd="git branch -D"
-alias nah="git reset --hard && git clean -df"
-
-alias pbcopy='xclip -sel clip'
-
-DIR=${PWD##*/}
-if [ "code" = "$DIR" ] || [ "projects" = "$DIR" ]; then
-    ls
-fi
-
 composer-link() {  
     composer config repositories.$1 '{"type": "path", "url": "../packages/'$1'"}'
 }
@@ -47,6 +23,7 @@ wip() {
 }
 
 web() { cd /home/y/code && ls -lh; }
+
 dotfiles() { cd $HOME/.dotfiles && ls -lh; }
 
 art() {
@@ -81,4 +58,51 @@ function weather() {
    fi
 
    eval "curl http://wttr.in/${city}"
+}
+
+
+xdebug() {
+   iniFileLocation="/etc/php/7.4/cli/php.ini";
+   
+   currentLine=`cat $iniFileLocation | grep xdebug.so`
+
+    if [ -z "$currentLine" ]; 
+    then
+        sudo sh -c "cat << 'EOF' >> $iniFileLocation
+zend_extension=/usr/lib/php/20190902/xdebug.so
+xdebug.remote_enable=1
+EOF"
+
+        echo "xdebug is now active";
+        return
+    fi
+
+   if [[ $currentLine =~ ^#zend_extension ]];
+   then
+      sudo sed -i -e 's/^#zend_extension/zend_extension/g' $iniFileLocation
+      sudo sed -i -e 's/^#xdebug.remote_enable/xdebug.remote_enable/g' $iniFileLocation
+      echo "xdebug is now active";
+   else
+      sudo sed -i -e 's/^zend_extension/#zend_extension/g' $iniFileLocation
+      sudo sed -i -e 's/^xdebug.remote_enable/#xdebug.remote_enable/g' $iniFileLocation
+      echo "xdebug is now inactive";
+   fi
+}
+
+db() {
+    if [ "$1" = "refresh" ]; then
+        mysql -uroot -e "drop database $2; create database $2"
+    elif [ "$1" = "create" ]; then
+        mysql -uroot -e "create database $2"
+    elif [ "$1" = "drop" ]; then
+        mysql -uroot -e "drop database $2"
+    fi
+}
+
+describe() {
+    table=$1
+
+    database='touchstone'
+
+    psql -c "\d $table" $database
 }

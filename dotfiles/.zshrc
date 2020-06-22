@@ -1,6 +1,4 @@
-export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
-export PATH="$HOME/.config/composer/vendor/bin:$PATH"
-export PATH="vendor/bin:$PATH"
+export PATH="$HOME/bin:$HOME/.local/bin:$HOME/.config/composer/vendor/bin:vendor/bin:$PATH"
 export PATH="$HOME/.dotfiles/scripts:$PATH"
 
 # Path to your oh-my-zsh installation.
@@ -14,7 +12,15 @@ plugins=(git laravel4 laravel5 composer osx vagrant)
 
 source $ZSH/oh-my-zsh.sh
 
-source $HOME/.dotfiles/dotfiles/aliases.zsh
+source $HOME/.dotfiles/dotfiles/aliases.sh
+source $HOME/.dotfiles/dotfiles/functions.sh
 
 # xdebug configuration for vscode
 export XDEBUG_CONFIG="idekey=VSCODE"
+
+DIR=${PWD##*/}
+
+if [ "code" = "$DIR" ]; then
+    ls
+fi
+
