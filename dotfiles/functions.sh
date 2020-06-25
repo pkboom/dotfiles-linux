@@ -106,3 +106,17 @@ describe() {
 
     psql -c "\d $table" $database
 }
+
+import-format() {
+    if [ -n "$1" ]; then # If command line argument is present
+        cd $1
+
+        wget https://raw.githubusercontent.com/pkboom/format/master/.eslintrc.js
+        wget https://raw.githubusercontent.com/pkboom/format/master/.php_cs.dist
+        wget https://raw.githubusercontent.com/pkboom/format/master/.prettierrc    
+    else
+        wget https://raw.githubusercontent.com/pkboom/format/master/.eslintrc.js
+        wget https://raw.githubusercontent.com/pkboom/format/master/.php_cs.dist
+        wget https://raw.githubusercontent.com/pkboom/format/master/.prettierrc    
+    fi
+}
