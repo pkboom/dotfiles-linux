@@ -19,4 +19,5 @@
 	required = true
 [alias]
 	# https://tomschlick.com/2017/03/20/git-forget
-	forget="! /usr/local/bin/git fetch -p && /usr/local/bin/git branch -vv | awk '/: gone]/{print $1}' | xargs /usr/local/bin/git branch -D"
+	# https://jeffkreeftmeijer.com/git-git/
+	forget="! git fetch --prune && git branch -vv | awk '/: gone]/ {print $1}' | xargs git branch -D"
