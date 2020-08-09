@@ -7,7 +7,7 @@
 	confilctstyle = diff3
 [core]
 	editor = gvim -f
-	excludesfile = /home/y/.gitignore_global
+	excludesfile = $HOME/.gitignore_global
 [credetial]
 	helper = cache
 [push]

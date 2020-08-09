@@ -2,9 +2,11 @@ composer-link() {
     composer config repositories.$1 '{"type": "path", "url": "../packages/'$1'"}'
 }
 
-package-new() {
+create-package() {
     if [ -n "$1" ]; then # If command line argument is present
-        dir='/home/y/code/packages'
+        dir="$HOME/code/packages"
+
+        mkdir -p $dir
 
         git clone https://github.com/pkboom/skeleton-php "$dir/$1"
 
