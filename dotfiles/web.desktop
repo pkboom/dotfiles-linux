@@ -1,6 +1,6 @@
 [Desktop Entry]
 Version=1.0
-Name=Web
+Name=Terminal
 Exec=gnome-terminal --working-directory=/home/y/code
 Icon=utilities-terminal
 Type=Application
