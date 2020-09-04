@@ -2,7 +2,7 @@ composer-link() {
     composer config repositories.$1 '{"type": "path", "url": "../packages/'$1'"}'
 }
 
-create-package() {
+package-new() {
     if [ -n "$1" ]; then # If command line argument is present
         dir="$HOME/code/packages"
 

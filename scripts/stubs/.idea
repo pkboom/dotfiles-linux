@@ -1,9 +1,0 @@
-- workflow
-change app name
-
-set up telescope
-
-paste below to phpunit.xml
-<env name="TELESCOPE_ENABLED" value="false"/>
-<env name="DB_CONNECTION" value="sqlite"/>
-<env name="DB_DATABASE" value=":memory:"/>

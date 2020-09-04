@@ -23,9 +23,3 @@ sudo adduser $USER www-data
 
 composer global require "laravel/installer"
 npm install -g tldr
-
-BACKUP=~/code/projects/linux-setup/backup
-
-cp $BACKUP/robbyrussell.zsh-theme ~/.oh-my-zsh/themes/
-cp $BACKUP/.zshrc ~/
-
