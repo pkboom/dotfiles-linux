@@ -1,9 +1,0 @@
-#!/bin/bash
-
-DIR=~/code/projects/linux-setup/backup
-
-cp ~/.oh-my-zsh/themes/robbyrussell.zsh-theme $DIR
-cp ~/.zshrc $DIR
-cp ~/.aliases $DIR
-
-ls -lAh ../backup
