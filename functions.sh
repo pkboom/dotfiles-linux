@@ -102,11 +102,18 @@ db() {
 }
 
 describe() {
-    table=$1
+    database=$1
+    table=$2
 
-    database='touchstone'
+    # mysql
+    if [ -z "$2" ]; then # If no table
+        mysql -uroot -e "use $1; show tables"
+    else
+        mysql -uroot -e "use $1; describe $2"
+    fi
 
-    psql -c "\d $table" $database
+    # postgres
+    # psql -c "\d $table" $database
 }
 
 import-format() {
