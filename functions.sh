@@ -43,15 +43,6 @@ art() {
     php artisan
 }
 
-# https://alexvanderbist.com/posts/2019/running-laravel-scheduler-without-setting-up-cron
-function scheduler () {
-    while :; do
-        php artisan schedule:run
-    	echo "Sleeping 60 seconds..."
-        sleep 60
-    done
-}
-
 function weather() {
    city="$1"
 
