@@ -14,6 +14,8 @@
 
 Install [nodejs & npm](https://github.com/nodesource/distributions/blob/master/README.md)
 
+`npm install -g tldr`
+
 Create launcher
 
 ```bash
