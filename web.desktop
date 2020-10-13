@@ -1,7 +1,7 @@
 [Desktop Entry]
 Version=1.0
 Name=Terminal
-Exec=gnome-terminal --working-directory=/home/y/code
+Exec=gnome-terminal --working-directory=$HOME/code
 Icon=utilities-terminal
 Type=Application
 Categories=GNOME;GTK;System;TerminalEmulator;

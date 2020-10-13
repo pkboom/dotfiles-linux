@@ -24,7 +24,7 @@ wip() {
     fi
 }
 
-web() { cd /home/y/code && ls -lh; }
+web() { cd $HOME/code && ls -lh; }
 
 dotfiles() { cd $HOME/.dotfiles && ls -lh; }
 
