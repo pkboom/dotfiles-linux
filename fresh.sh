@@ -52,8 +52,8 @@ cp $HOME/.dotfiles/.plugins.vim $HOME/.vim/plugins.vim
 sudo adduser $USER www-data
 
 # copy fonts
-cp fonts/* $HOME/.local/share/fonts 
+cp $HOME/.dotfiles/fonts/* $HOME/.local/share/fonts 
 
-./install-fira-code.sh
-./link.sh
+$HOME/.dotfiles/install-fira-code.sh
+$HOME/.dotfiles/link.sh
 
