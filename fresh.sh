@@ -33,6 +33,9 @@ sudo apt-get install -y deluge
 sudo apt-get install -y vim
 sudo apt-add-repository ppa:alexanderk23/ppa
 sudo apt-get install -y gluqlo
+sudo apt install -y nodejs
+sudo apt install -y npm
+sudo npm install -g tldr
 
 # pbcopy
 sudo apt-get install -y xclip
