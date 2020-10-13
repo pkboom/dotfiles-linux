@@ -41,11 +41,9 @@ system settings → sound → sounds(one of tabs) → starting sound off / leavi
 
 ### Change Mouse Button Modifier
 
-Run dconf edit
+Run `dconf-editor`
 
-Find ‘mouse’
-
-wm/preference
+Find ‘mouse-button-modifier’
 
 mouse-button-modifier -> <super> or <meta>
 
