@@ -16,18 +16,18 @@ Install [nodejs & npm](https://github.com/nodesource/distributions/blob/master/R
 
 `npm install -g tldr`
 
-Create launcher
+Create launcher(right mouse click on background)
 
-```bash
-// icons/Mint-x/apps/96/comix.svg
-shutdown -h now
-```
+search icon by comix
+`shutdown -h now`
 
 Install [albert](https://albertlauncher.github.io/docs/installing)
 
 Install kakaotalk
 
 Install [vscode](https://code.visualstudio.com/download)
+
+`php -i | xclip -sel clip`
 
 Install [xdebug](https://xdebug.org/wizard.php)
 
@@ -37,7 +37,7 @@ Install java
 
 ### Sound
 
-system settings → sound → sound effects → starting sound off / leaving cinnamon off
+system settings → sound → sounds(one of tabs) → starting sound off / leaving cinnamon off
 
 ### Change Mouse Button Modifier
 
