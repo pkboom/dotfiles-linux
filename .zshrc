@@ -6,10 +6,10 @@ export PATH=node_modules/.bin:vendor/bin:$PATH
 
 export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 
-export DOTFILES=$HOME/.dotfiles
+DOTFILES=$HOME/.dotfiles
 
 # Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
+ZSH=$HOME/.oh-my-zsh
 
 ZSH_CUSTOM=$DOTFILES/oh-my-zsh-custom
 
