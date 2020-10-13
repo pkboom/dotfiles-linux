@@ -23,7 +23,6 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 composer global require laravel/installer
 sudo apt-get install network-manager libnss3-tools jq xsel
-
 composer global require cpriego/valet-linux
 valet install
 
