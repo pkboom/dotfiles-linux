@@ -1,4 +1,12 @@
-Clone this repo to `~/.dotfiles`
+[Connecting to GitHub with SSH](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/connecting-to-github-with-ssh)
+
+`sudo apt install git -y`
+
+`mkdir ~/.dotfiles`
+
+`cd ~/.dotfiles`
+
+`git clone git@github.com:pkboom/dotfiles-linux.git`
 
 Run `fresh.sh`
 
