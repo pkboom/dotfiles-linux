@@ -9,7 +9,7 @@ sudo apt-get upgrade
 # sudo apt-get purge php-common
 sudo apt install software-properties-common
 sudo add-apt-repository ppa:ondrej/php
-sudo apt-get install -y php-mbstring php-sqlite3 php-xml php-gd php-zip php-curl php-cli php-fpm php-bcmath php-mysql php-mcrypt php-sqlite3 php-mysql php
+sudo apt-get install -y php-mbstring php-sqlite3 php-xml php-gd php-zip php-curl php-cli php-fpm php-bcmath php-mysql php-sqlite3 php-mysql php
 
 curl -sS https://getcomposer.org/installer | php
 
