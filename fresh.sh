@@ -9,7 +9,7 @@ sudo apt-get upgrade
 # sudo apt-get purge php-common
 sudo apt install software-properties-common
 sudo add-apt-repository ppa:ondrej/php
-sudo apt-get install -y php-mbstring php-sqlite3 php-xml php-gd php-zip php-curl php-cli php-fpm php-bcmath php-mysql php
+sudo apt-get install -y php-mbstring php-sqlite3 php-xml php-gd php-zip php-curl php-cli php-fpm php-bcmath php-mysql php-mcrypt php-sqlite3 php-mysql php
 
 curl -sS https://getcomposer.org/installer | php
 
@@ -22,14 +22,13 @@ chsh -s $(which zsh)
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 composer global require laravel/installer
+sudo apt-get install network-manager libnss3-tools jq xsel
+
 composer global require cpriego/valet-linux
 valet install
 
 sudo apt install -y mysql-server
 sudo mysql_secure_installation
-
-# change Mouse Button Modifier
-sudo apt-get install -y dconf-tools
 
 sudo apt-get install -y deluge
 sudo apt-get install -y vim
