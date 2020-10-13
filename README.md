@@ -53,3 +53,5 @@ mouse-button-modifier -> <super> or <meta>
 $ sudo visudo
 // y ALL=(ALL) NOPASSWD: ALL
 ```
+
+Add `albert`, `google chrome` to startup application
