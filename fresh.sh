@@ -35,6 +35,7 @@ sudo apt install -y nodejs
 sudo apt install -y npm
 sudo npm install -g -y tldr
 sudo apt-get install -y dconf-editor
+sudo apt install -y gedit
 
 # pbcopy
 sudo apt-get install -y xclip
