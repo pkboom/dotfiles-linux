@@ -6,7 +6,7 @@
 
 `cd ~/.dotfiles`
 
-`git clone git@github.com:pkboom/dotfiles-linux.git`
+`git clone git@github.com:pkboom/dotfiles-linux.git ~/.dotfiles`
 
 Run `fresh.sh`
 
