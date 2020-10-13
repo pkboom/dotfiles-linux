@@ -55,3 +55,6 @@ $ sudo visudo
 ```
 
 Add `albert`, `google chrome` to startup application
+
+zsh
+chsh -s $(which zsh) 
