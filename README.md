@@ -68,4 +68,4 @@ chsh -s $(which zsh)
 
 `sudo apt install snapd`
 
-'sudo snap install mailspring'
+`sudo snap install mailspring`
