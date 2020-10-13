@@ -8,9 +8,9 @@
 
 `git clone git@github.com:pkboom/dotfiles-linux.git ~/.dotfiles`
 
-Run `fresh.sh`
+`./fresh.sh`
 
-Run `source ~/.zshrc`
+`source ~/.zshrc`
 
 Install [nodejs & npm](https://github.com/nodesource/distributions/blob/master/README.md)
 
