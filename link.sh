@@ -16,7 +16,10 @@ rm -rf $HOME/.gitignore_global
 ln -s $HOME/.dotfiles/.gitignore_global $HOME/.gitignore_global
 
 rm -rf $HOME/.local/share/applications/web.desktop
-ln -s $HOME/.dotfiles/web.desktop $HOME/.local/share/applications/web.desktop
+ln -s $HOME/.dotfiles/desktops/web.desktop $HOME/.local/share/applications/web.desktop
+
+rm -rf $HOME/.local/share/applications/download.desktop
+ln -s $HOME/.dotfiles/desktops/download.desktop $HOME/.local/share/applications/download.desktop
 
 sudo rm -rf /etc/environment
 sudo ln -s $HOME/.dotfiles/environment /etc/environment

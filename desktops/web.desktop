@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=web
+Exec=gnome-terminal --working-directory=/home/q/code
+Terminal=false
+Icon=terminator
+Type=Application

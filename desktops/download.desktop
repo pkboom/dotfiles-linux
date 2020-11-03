@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=download
+Exec=nemo /home/q/Downloads
+Terminal=false
+Icon=folder-wine
+Type=Application
