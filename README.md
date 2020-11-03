@@ -23,8 +23,6 @@ search icon by comix
 
 Install [albert](https://albertlauncher.github.io/docs/installing)
 
-Install kakaotalk
-
 Install [vscode](https://code.visualstudio.com/download)
 
 `php -i | xclip -sel clip`
@@ -56,9 +54,8 @@ $ sudo visudo
 
 Add `albert`, `google chrome` to startup application
 
-zsh
-chsh -s $(which zsh) 
-
+change a login shell to zsh
+chsh -s \$(which zsh)
 
 [Install snap](https://snapcraft.io/docs/installing-snap-on-linux-mint)
 
@@ -69,3 +66,16 @@ chsh -s $(which zsh)
 `sudo apt install snapd`
 
 `sudo snap install mailspring`
+
+### change maximum upload file size
+
+`locate php.ini`
+
+open `/etc/php/*.*/fpm/php.ini`
+
+```
+upload_max_filesize = 100M
+post_max_size = 100M
+```
+
+`valet restart`
