@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=download
-Exec=nemo /home/q/Downloads
+Exec=nemo /home/y/Downloads
 Terminal=false
 Icon=folder-wine
 Type=Application
