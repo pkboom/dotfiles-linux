@@ -1,6 +1,6 @@
 [Desktop Entry]
+Comment=
+Terminal=false
 Name=web
 Exec=gnome-terminal --working-directory=/home/y/code
-Terminal=false
-Icon=terminator
 Type=Application
