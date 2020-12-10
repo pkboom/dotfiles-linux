@@ -8,6 +8,7 @@
 [core]
 	editor = gvim -f
 	excludesfile = $HOME/.gitignore_global
+	compression = 1
 [credetial]
 	helper = cache
 [push]
