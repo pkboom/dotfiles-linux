@@ -79,3 +79,11 @@ post_max_size = 100M
 ```
 
 `valet restart`
+
+### screenshot
+
+Keyboard > Shortcuts > Custom shortcuts
+command
+`gnome-screenshot -i`
+binding
+Shift+Alt+4
