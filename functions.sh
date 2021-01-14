@@ -29,18 +29,11 @@ web() { cd $HOME/code && ls -lh; }
 dotfiles() { cd $HOME/.dotfiles && ls -lh; }
 
 art() {
-    if [ -n "$1" ]; then # If command line argument is present
-        if [ $1 = "tinker" ]; then
-            rlwrap php artisan tinker
-        elif [ $1 = "fresh" ]; then
-            php artisan migrate:fresh --seed
-        else
-            php artisan $@
-        fi
-        return
+    if [ -n "$1" ] && [ $1 = "fresh" ]; then
+        php artisan migrate:fresh --seed
+    else
+        php artisan $@
     fi
-
-    php artisan
 }
 
 function weather() {
@@ -150,16 +143,6 @@ laravel-new() {
 
 function mkd() {
    mkdir -p "$@" && cd "$@"
-}
-
-function db {
-    if [ "$1" = "refresh" ]; then
-        mysql -uroot -pa -e "drop database $2; create database $2"
-    elif [ "$1" = "create" ]; then
-        mysql -uroot -pa -e "create database $2"
-    elif [ "$1" = "drop" ]; then
-        mysql -uroot -pa -e "drop database $2"
-    fi
 }
 
 function scheduler () {
