@@ -141,7 +141,7 @@ laravel-new() {
     fi
 }
 
-function mkd() {
+function mkcd() {
    mkdir -p "$@" && cd "$@"
 }
 
