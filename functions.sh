@@ -89,15 +89,27 @@ describe() {
     database=$1
     table=$2
 
-    # mysql
-    if [ -z "$2" ]; then # If no table
-        mysql -uroot -e "use $1; show tables"
+    if [ $DATABASE_MANAGEMENT_SYSTEM = "mysql" ]; then
+        if [ -z "$2" ]; then # If no table
+            mysql -uroot -e "use $1; show tables"
+        else
+            mysql -uroot -e "use $1; describe $2"
+        fi
     else
-        mysql -uroot -e "use $1; describe $2"
+        if [ -z "$2" ]; then # If no table
+            psql -c "\d" $database
+        else
+            psql -c "\d $table" $database
+        fi
     fi
+}
 
-    # postgres
-    # psql -c "\d $table" $database
+switch-db(){
+    if [ $DATABASE_MANAGEMENT_SYSTEM = "mysql" ]; then
+        export DATABASE_MANAGEMENT_SYSTEM=postgres
+    else
+        export DATABASE_MANAGEMENT_SYSTEM=mysql
+    fi
 }
 
 import-format() {

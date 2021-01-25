@@ -6,6 +6,8 @@ export PATH=node_modules/.bin:vendor/bin:$PATH
 
 export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 
+export DATABASE_MANAGEMENT_SYSTEM=postgres
+
 DOTFILES=$HOME/.dotfiles
 
 # Path to your oh-my-zsh installation.
