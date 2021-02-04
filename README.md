@@ -1,5 +1,9 @@
 [Connecting to GitHub with SSH](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/connecting-to-github-with-ssh)
 
+
+### Copy public key and register on github
+`cat id_ed25519.pub`
+
 ### No Password for y
 
 ```bash
@@ -12,9 +16,6 @@ sudo apt install git -y
 mkdir ~/.dotfiles
 cd ~/.dotfiles
 ```
-
-Copy public key and register on github
-`cat id_ed25519.pub`
 
 ```
 git clone git@github.com:pkboom/dotfiles-linux.git ~/.dotfiles
