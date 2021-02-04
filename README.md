@@ -40,8 +40,6 @@ Install [vscode](https://code.visualstudio.com/download)
 
 Install [xdebug](https://xdebug.org/wizard.php)
 
-Install [cairo-clock](https://packages.ubuntu.com/search?keywords=cairo-clock)
-
 Install java
 
 ### Sound
