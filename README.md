@@ -24,7 +24,7 @@ Create launcher(right mouse click on background)
 search icon by `comix`
 `shutdown -h now`
 
-Install [albert](https://albertlauncher.github.io/docs/installing)
+Install [albert](https://albertlauncher.github.io)
 
 Install [vscode](https://code.visualstudio.com/download)
 
