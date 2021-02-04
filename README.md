@@ -54,7 +54,7 @@ Find ‘mouse-button-modifier’
 
 mouse-button-modifier -> <super> or <meta>
 
-
+ 
 Add `albert`, `google chrome` to startup application
 
 change a login shell to zsh
