@@ -1,5 +1,12 @@
 [Connecting to GitHub with SSH](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/connecting-to-github-with-ssh)
 
+### No Password for y
+
+```bash
+$ sudo visudo
+// y ALL=(ALL) NOPASSWD: ALL
+```
+
 ```sh
 sudo apt install git -y
 mkdir ~/.dotfiles
@@ -48,12 +55,6 @@ Find ‘mouse-button-modifier’
 
 mouse-button-modifier -> <super> or <meta>
 
-### No Password for y
-
-```bash
-$ sudo visudo
-// y ALL=(ALL) NOPASSWD: ALL
-```
 
 Add `albert`, `google chrome` to startup application
 
