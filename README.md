@@ -4,7 +4,7 @@
 
 ```bash
 $ sudo visudo
-// y ALL=(ALL) NOPASSWD: ALL
+y ALL=(ALL) NOPASSWD: ALL
 ```
 
 ```sh
