@@ -105,11 +105,7 @@ describe() {
 }
 
 switch-db(){
-    if [ $DATABASE_MANAGEMENT_SYSTEM = "mysql" ]; then
-        export DATABASE_MANAGEMENT_SYSTEM=postgres
-    else
-        export DATABASE_MANAGEMENT_SYSTEM=mysql
-    fi
+    export DATABASE_MANAGEMENT_SYSTEM=$1 // mysql or postgres
 }
 
 import-format() {
