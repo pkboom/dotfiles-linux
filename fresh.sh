@@ -29,9 +29,6 @@ sudo mysql_secure_installation
 
 sudo apt-get install -y deluge
 sudo apt-get install -y vim
-sudo apt install -y nodejs
-sudo apt install -y npm
-sudo npm install -g -y tldr
 sudo apt-get install -y dconf-editor
 sudo apt install -y gedit
 sudo apt install -y python3-pip
