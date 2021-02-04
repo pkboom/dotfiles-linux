@@ -32,7 +32,7 @@ sudo apt-get install -y vim
 sudo apt-get install -y dconf-editor
 sudo apt install -y gedit
 sudo apt install -y python3-pip
-sudo apt-get install -h rlwrap
+# sudo apt-get install -h rlwrap
 
 # pbcopy
 sudo apt-get install -y xclip
@@ -43,7 +43,6 @@ sudo apt-get install -y nginx
 mkdir $HOME/code
 
 mkdir $HOME/.vim
-cp $HOME/.dotfiles/.plugins.vim $HOME/.vim/plugins.vim
 
 # add current user to www-data
 sudo adduser $USER www-data
