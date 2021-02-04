@@ -1,16 +1,19 @@
 [Connecting to GitHub with SSH](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/connecting-to-github-with-ssh)
 
-`sudo apt install git -y`
+```sh
+sudo apt install git -y
+mkdir ~/.dotfiles
+cd ~/.dotfiles
+```
 
-`mkdir ~/.dotfiles`
+Copy public key and register on github
+`cat id_ed25519.pub`
 
-`cd ~/.dotfiles`
-
-`git clone git@github.com:pkboom/dotfiles-linux.git ~/.dotfiles`
-
-`./fresh.sh`
-
-`source ~/.zshrc`
+```
+git clone git@github.com:pkboom/dotfiles-linux.git ~/.dotfiles
+./fresh.sh
+source ~/.zshrc
+```
 
 Install [nodejs & npm](https://github.com/nodesource/distributions/blob/master/README.md)
 
