@@ -48,9 +48,10 @@ system settings → sound → sounds(one of tabs) → starting sound off / leavi
 
 ### Change Mouse Button Modifier
 
-// Run `dconf-editor`  
-// Find ‘mouse-button-modifier’  
-// mouse-button-modifier -> `<super>` or `<meta>`
+Run `dconf-editor`  
+Find ‘mouse-button-modifier’  
+org.cinnamon.desktop.wm.preferences =>
+mouse-button-modifier -> `<super>` or `<meta>`
 
  
 Add `albert`, `google chrome` to startup application
