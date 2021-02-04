@@ -90,3 +90,6 @@ command
 `gnome-screenshot -i`
 binding
 Shift+Alt+4
+
+### Dateformet
+`%m-%d %l:%M %p`
