@@ -36,6 +36,7 @@ sudo apt-get install -y dconf-editor
 sudo apt install -y gedit
 sudo apt install -y python3-pip
 sudo apt-get install -h rlwrap
+sudo apt-get install -y build-essential
 
 # pbcopy
 sudo apt-get install -y xclip
