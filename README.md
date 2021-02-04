@@ -17,11 +17,11 @@ source ~/.zshrc
 
 Install [nodejs & npm](https://github.com/nodesource/distributions/blob/master/README.md)
 
-`npm install -g tldr`
+`sudo npm install -g tldr`
 
 Create launcher(right mouse click on background)
 
-search icon by comix
+search icon by `comix`
 `shutdown -h now`
 
 Install [albert](https://albertlauncher.github.io/docs/installing)
