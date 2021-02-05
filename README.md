@@ -95,3 +95,11 @@ Shift+Alt+4
 3. Change password
 
 4. For a new password, enter null
+
+### Grub timeout
+`code /etc/default/grub`
+
+#GRUB_TIMEOUT_STYLE=hidden
+GRUB_TIMEOUT=1
+
+`sudo update-grub`
