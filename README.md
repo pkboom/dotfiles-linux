@@ -103,3 +103,11 @@ Shift+Alt+4
 GRUB_TIMEOUT=1
 
 `sudo update-grub`
+
+### Disable printer connection notification
+
+`code /etc/cups/cups-browsed.conf`
+
+BrowseRemoteProtocols none
+
+sudo service cups restart

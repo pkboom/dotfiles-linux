@@ -105,7 +105,7 @@ describe() {
 }
 
 switch-db(){
-    export DATABASE_MANAGEMENT_SYSTEM=$1 // mysql or postgres
+    export DATABASE_MANAGEMENT_SYSTEM=$1 # mysql or postgres
 }
 
 import-format() {
