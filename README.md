@@ -86,3 +86,12 @@ Shift+Alt+4
 
 ### Dateformet
 `%m-%d %l:%M %p`
+
+### Disable keyring
+1. Go to `Passwords and Keys`
+
+2. Right click `Default keyring` 
+
+3. Change password
+
+4. For a new password, enter null
