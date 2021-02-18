@@ -1,7 +1,7 @@
 [Connecting to GitHub with SSH](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/connecting-to-github-with-ssh)
 
-
 ### Copy public key and register on github
+
 `cat id_ed25519.pub`
 
 ### No Password for y
@@ -53,7 +53,6 @@ Find ‘mouse-button-modifier’
 org.cinnamon.desktop.wm.preferences =>
 mouse-button-modifier -> `<super>` or `<meta>`
 
- 
 Add `albert`, `google chrome` to startup application
 
 change a login shell to zsh
@@ -85,18 +84,21 @@ binding
 Shift+Alt+4
 
 ### Dateformet
+
 `%m-%d %l:%M %p`
 
 ### Disable keyring
+
 1. Go to `Passwords and Keys`
 
-2. Right click `Default keyring` 
+2. Right click `Default keyring`
 
 3. Change password
 
 4. For a new password, enter null
 
 ### Grub timeout
+
 `code /etc/default/grub`
 
 #GRUB_TIMEOUT_STYLE=hidden

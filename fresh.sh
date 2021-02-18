@@ -41,8 +41,6 @@ sudo apt-get install -y nginx
 
 mkdir $HOME/code
 
-mkdir $HOME/.vim
-
 # add current user to www-data
 sudo adduser $USER www-data
 

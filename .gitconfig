@@ -6,7 +6,7 @@
 [merge]
 	confilctstyle = diff3
 [core]
-	editor = gvim -f
+	editor = code
 	excludesfile = $HOME/.gitignore_global
 [credetial]
 	helper = cache
