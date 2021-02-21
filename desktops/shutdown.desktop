@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=shutdown
+Exec=shutdown -h now
+Terminal=false
+Icon=comix
+Type=Application

@@ -18,6 +18,9 @@ ln -s $HOME/.dotfiles/desktops/web.desktop $HOME/.local/share/applications/web.d
 rm -rf $HOME/.local/share/applications/download.desktop
 ln -s $HOME/.dotfiles/desktops/download.desktop $HOME/.local/share/applications/download.desktop
 
+rm -rf $HOME/.local/share/applications/shutdown.desktop
+ln -s $HOME/.dotfiles/desktops/shutdown.desktop $HOME/.local/share/applications/shutdown.desktop
+
 sudo rm -rf /etc/environment
 sudo ln -s $HOME/.dotfiles/environment /etc/environment
 
