@@ -46,14 +46,22 @@ function weather() {
    eval "curl http://wttr.in/${city}"
 }
 
-
 xdebug() {
-   iniFileLocation="/etc/php/7.4/cli/php.ini";
+    read -p "Is php 8.0 and is xdebug /usr/lib/php/20190902/xdebug.so " -n 1 -r
+
+    echo
+
+    if [[ ! $REPLY =~ ^[Yy]$ ]] then
+        echo 'You better change it now.'
+
+        exit 1
+    fi
+
+   iniFileLocation="/etc/php/8.0/cli/php.ini";
    
    currentLine=`cat $iniFileLocation | grep xdebug.so`
 
-    if [ -z "$currentLine" ]; 
-    then
+    if [ -z "$currentLine" ]; then
         sudo sh -c "cat << 'EOF' >> $iniFileLocation
 zend_extension=/usr/lib/php/20190902/xdebug.so
 xdebug.remote_enable=1
@@ -63,8 +71,7 @@ EOF"
         return
     fi
 
-   if [[ $currentLine =~ ^#zend_extension ]];
-   then
+   if [[ $currentLine =~ ^#zend_extension ]]; then
       sudo sed -i -e 's/^#zend_extension/zend_extension/g' $iniFileLocation
       sudo sed -i -e 's/^#xdebug.remote_enable/xdebug.remote_enable/g' $iniFileLocation
       echo "xdebug is now active";
@@ -119,33 +126,6 @@ import-format() {
         wget https://raw.githubusercontent.com/pkboom/format/master/.eslintrc.js
         wget https://raw.githubusercontent.com/pkboom/format/master/.php_cs.dist
         wget https://raw.githubusercontent.com/pkboom/format/master/.prettierrc    
-    fi
-}
-
-laravel-new() {
-    if [ -n "$1" ]; then # If command line argument is present
-        laravel new $1
-
-        cd $1
-
-        composer require barryvdh/laravel-debugbar --dev
-        composer require --dev beyondcode/laravel-dump-server 
-
-        wget https://raw.githubusercontent.com/pkboom/setup-files/master/.eslintrc.js
-        wget https://raw.githubusercontent.com/pkboom/setup-files/master/.php_cs.dist
-        wget https://raw.githubusercontent.com/pkboom/setup-files/master/.prettierrc    
-        wget https://gist.githubusercontent.com/calebporzio/cdf70bd390688646fda65490006eb0a6/raw/6e4f0117cb92c5015d99742424cb132e1dec36c7/tinker.config.php    
-
-        rm .gitignore
-        wget https://raw.githubusercontent.com/pkboom/setup-files/master/.gitignore    
-
-        touch .idea
-
-        git init
-
-        echo "Add PSYSH_CONFIG=tinker.config.php to .env"
-    else
-        echo "Application name is needed.";
     fi
 }
 

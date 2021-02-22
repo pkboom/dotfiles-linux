@@ -4,4 +4,4 @@ Exec=bash -c 'cd $HOME/code/grizzly;valet share;$SHELL'
 Icon=utilities-terminal
 Terminal=true
 Type=Application
-Categories=Application;
+Categories=Application

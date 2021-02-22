@@ -1,6 +1,6 @@
 [Desktop Entry]
-Name=code-grizzly
-Exec=bash -c 'cd $HOME/code/grizzly;code .'
+Name=code-nakama
+Exec=bash -c 'cd $HOME/code/nakama;code .'
 Icon=com.visualstudio.code
 Terminal=false
 Type=Application

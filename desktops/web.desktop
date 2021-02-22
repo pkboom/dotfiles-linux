@@ -1,6 +1,7 @@
 [Desktop Entry]
-Comment=
-Terminal=false
 Name=web
 Exec=gnome-terminal --working-directory=/home/y/code
+Icon=utilities-terminal
+Terminal=false
 Type=Application
+Categories=Application
