@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=code-nakama
+Name=nakama-code
 Exec=bash -c 'cd $HOME/code/nakama;code .'
 Icon=com.visualstudio.code
 Terminal=false

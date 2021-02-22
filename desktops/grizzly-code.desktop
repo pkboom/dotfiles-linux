@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=grizzly-code
+Exec=bash -c 'cd $HOME/code/grizzly;code .'
+Icon=com.visualstudio.code
+Terminal=false
+Type=Application
+Categories=Application

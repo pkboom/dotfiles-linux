@@ -1,6 +1,6 @@
 [Desktop Entry]
-Name=code-matsu
-Exec=bash -c 'cd $HOME/code/matsu;code .'
+Name=touchstone-code
+Exec=bash -c 'cd $HOME/code/touchstone;code .'
 Icon=com.visualstudio.code
 Terminal=false
 Type=Application

@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=grizzly-ssh
+Exec=bash -c 'ssh matsu;$SHELL'
+Icon=utilities-terminal
+Terminal=true
+Type=Application
+Categories=Application

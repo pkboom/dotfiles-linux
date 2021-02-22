@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=valet-grizzly
+Name=grizzly-valet
 Exec=bash -c 'cd $HOME/code/grizzly;valet share;$SHELL'
 Icon=utilities-terminal
 Terminal=true
