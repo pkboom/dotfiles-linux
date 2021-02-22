@@ -27,7 +27,6 @@ valet install
 sudo apt install -y mysql-server
 sudo mysql_secure_installation
 
-sudo apt-get install -y vim
 sudo apt-get install -y dconf-editor
 sudo apt install -y gedit
 sudo apt install -y python3-pip
