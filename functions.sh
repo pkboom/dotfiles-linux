@@ -26,8 +26,6 @@ wip() {
 
 web() { cd $HOME/code && ls -lh; }
 
-dotfiles() { cd $HOME/.dotfiles && ls -lh; }
-
 art() {
     if [ -n "$1" ] && [ $1 = "fresh" ]; then
         php artisan migrate:fresh --seed

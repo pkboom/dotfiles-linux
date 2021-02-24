@@ -17,8 +17,6 @@ ZSH_CUSTOM=$DOTFILES/oh-my-zsh-custom
 
 ZSH_THEME="robbyrussell2"
 
-plugins=(git)
-
 source $ZSH/oh-my-zsh.sh
 
 source $DOTFILES/aliases.sh
