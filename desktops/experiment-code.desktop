@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=experiment-code
+Exec=bash -c 'cd $HOME/code/experiment;code .'
+Icon=com.visualstudio.code
+Terminal=false
+Type=Application
+Categories=Application
