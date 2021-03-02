@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=matsu-code
+Name=matsu code
 Exec=bash -c 'cd $HOME/code/matsu;code .'
 Icon=com.visualstudio.code
 Terminal=false

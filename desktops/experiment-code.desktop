@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=experiment-code
+Name=experiment code
 Exec=bash -c 'cd $HOME/code/experiment;code .'
 Icon=com.visualstudio.code
 Terminal=false

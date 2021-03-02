@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=grizzly-forge
+Name=grizzly forge
 Exec=/usr/bin/google-chrome-stable https://forge.laravel.com/servers/431905/sites/1242487
 Icon=google-chrome
 Terminal=false

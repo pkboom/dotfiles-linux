@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=bitbucket
+Exec=/usr/bin/google-chrome-stable https://bitbucket.org/two_tall_totems/grizzly-paw-backend/src/develop/
+Icon=google-chrome
+Terminal=false
+Type=Application
+Categories=Application

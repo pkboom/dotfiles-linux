@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=grizzly-code
+Name=grizzly code
 Exec=bash -c 'cd $HOME/code/grizzly;code .'
 Icon=com.visualstudio.code
 Terminal=false

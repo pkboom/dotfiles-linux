@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=grizzly-firebase
+Name=grizzly firebase
 Exec=/usr/bin/google-chrome-stable https://console.firebase.google.com/u/1/project/grizzly-paw-bingo
 Icon=google-chrome
 Terminal=false

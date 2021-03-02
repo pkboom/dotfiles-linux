@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=grizzly-ssh
+Name=grizzly ssh
 Exec=bash -c 'ssh grizzly;$SHELL'
 Icon=utilities-terminal
 Terminal=true

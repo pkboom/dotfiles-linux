@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=nakama
+Name=nakama doc
 Exec=/usr/bin/google-chrome-stable https://heroiclabs.com/docs/runtime-code-basics/index.html
 Icon=google-chrome
 Terminal=false
