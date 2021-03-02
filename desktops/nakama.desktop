@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=nakama
+Exec=/usr/bin/google-chrome-stable https://heroiclabs.com/docs/runtime-code-basics/index.html
+Icon=google-chrome
+Terminal=false
+Type=Application
+Categories=Application
