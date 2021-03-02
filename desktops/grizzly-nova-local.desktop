@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=grizzly nova local 
+Exec=/usr/bin/google-chrome-stable http://grizzly.test/nova/dashboards/main
+Icon=google-chrome
+Terminal=false
+Type=Application
+Categories=Application
