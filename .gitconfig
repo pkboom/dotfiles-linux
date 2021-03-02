@@ -6,7 +6,7 @@
 [merge]
 	confilctstyle = diff3
 [core]
-	editor = vi 
+	editor = gedit 
 	excludesfile = $HOME/.gitignore_global
 [credetial]
 	helper = cache
