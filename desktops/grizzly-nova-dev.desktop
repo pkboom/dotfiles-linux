@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=grizzly nova local 
+Name=grizzly nova dev 
 Exec=/usr/bin/google-chrome-stable http://sportsbingo.com/nova/dashboards/main
 Icon=google-chrome
 Terminal=false
