@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=nakama ssh
+Exec=bash -c 'ssh nakama;$SHELL'
+Icon=utilities-terminal
+Terminal=true
+Type=Application
+Categories=Application
