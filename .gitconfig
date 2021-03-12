@@ -7,7 +7,7 @@
 	confilctstyle = diff3
 [core]
 	editor = gedit 
-	excludesfile = $HOME/.gitignore_global
+	excludesfile = ~/.gitignore_global
 [credetial]
 	helper = cache
 [push]
