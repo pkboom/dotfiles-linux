@@ -17,4 +17,4 @@ sudo ln -s $HOME/.dotfiles/environment /etc
 
 $HOME/.dotfiles/desktops/link-desktops.sh
 
-git config --global core.excludesfile $HOME/.gitignore_global
+# git config --global core.excludesfile $HOME/.gitignore_global
