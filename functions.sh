@@ -112,7 +112,7 @@ describe() {
 }
 
 switch_db() {
-    PS3="Select DB connection: "
+    PS3="Select DB: "
     connections=("mysql" "postgres")
 
     select connection in "${connections[@]}"
