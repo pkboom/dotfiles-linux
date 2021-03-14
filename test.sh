@@ -1,10 +1,21 @@
 #!/bin/bash
+ PS3='Select DB: '
+    options=('mysql' 'postgres')
+    
+    select db in "${options[@]}"
+    do
+        case $db in
+            'mysql')
+                break
+                ;;
+            'postgres')
+                break
+                ;;
+            *)
+                echo "invalid option $REPLY"
+                ;;
+        esac
+    done
 
-cd desktops
-
-for f in *; do
-    if [ -f "$f" ] && [[ "$f" =~ desktop$ ]]; then # 
-        ln -s $DOTFILES/desktops/$f $HOME/.local/share/applications
-        echo $f
-    fi
-done
+    echo "connected to $db"
+    export DATABASE_MANAGEMENT_SYSTEM=$db
