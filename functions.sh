@@ -1,3 +1,5 @@
+#!/bin/bash
+
 composer-link() {  
     composer config repositories.$1 '{"type": "path", "url": "../packages/'$1'"}'
 }
@@ -109,17 +111,17 @@ describe() {
     fi
 }
 
-switch_db(){
-    PS3='Select DB: '
-    options=('mysql' 'postgres')
-    
-    select db in "${options[@]}"
+switch_db() {
+    PS3="Select DB connection: "
+    connections=("mysql" "postgres")
+
+    select connection in "${connections[@]}"
     do
-        case $db in
-            'mysql')
+        case $connection in
+            "mysql")
                 break
                 ;;
-            'postgres')
+            "postgres")
                 break
                 ;;
             *)
@@ -128,8 +130,8 @@ switch_db(){
         esac
     done
 
-    echo "connected to $db"
-    export DATABASE_MANAGEMENT_SYSTEM=$db
+    echo "connected to $connection"
+    export DATABASE_MANAGEMENT_SYSTEM=$connection
 }
 
 import-format() {
