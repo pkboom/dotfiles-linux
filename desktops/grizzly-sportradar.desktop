@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=grizzly sportradar
+Exec=/usr/bin/google-chrome-stable https://developer.sportradar.com/docs/read/hockey/NHL_v7
+Icon=google-chrome
+Terminal=false
+Type=Application
+Categories=Application
