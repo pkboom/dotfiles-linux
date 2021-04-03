@@ -20,6 +20,7 @@ ZSH_THEME="robbyrussell2"
 source $ZSH/oh-my-zsh.sh
 
 source $DOTFILES/aliases.sh
+
 source $DOTFILES/functions.sh
 
 # xdebug configuration for vscode

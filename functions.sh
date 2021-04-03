@@ -36,6 +36,14 @@ art() {
     fi
 }
 
+watch() {
+    if [ -n "$1" ]; then
+        eval "npm run watch-${1}"
+    else
+        npm run watch
+    fi
+}
+
 function weather() {
    city="$1"
 
