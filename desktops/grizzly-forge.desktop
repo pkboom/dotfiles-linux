@@ -4,4 +4,3 @@ Exec=/usr/bin/google-chrome-stable https://forge.laravel.com/servers/431905/site
 Icon=google-chrome
 Terminal=false
 Type=Application
-Categories=Application

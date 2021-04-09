@@ -1,7 +1,7 @@
 [Desktop Entry]
-Name=grizzly nova local 
-Exec=/usr/bin/google-chrome-stable http://grizzly.test/nova/dashboards/main
-Icon=google-chrome
+Name=Postman
+Exec=/home/y/Documents/Postman/app/Postman
+Icon=/home/y/Documents/Postman/app/resources/app/assets/icon.png
 Terminal=false
 Type=Application
-Categories=Application
+Categories=Development

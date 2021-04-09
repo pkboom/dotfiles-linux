@@ -4,4 +4,3 @@ Exec=/usr/bin/google-chrome-stable https://bitbucket.org/two_tall_totems/grizzly
 Icon=google-chrome
 Terminal=false
 Type=Application
-Categories=Application

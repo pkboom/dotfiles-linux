@@ -4,4 +4,3 @@ Exec=/usr/bin/google-chrome-stable https://my.papertrailapp.com/systems/curved-c
 Icon=google-chrome
 Terminal=false
 Type=Application
-Categories=Application

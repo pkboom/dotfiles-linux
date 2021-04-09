@@ -4,4 +4,3 @@ Exec=/usr/bin/google-chrome-stable notion.so
 Icon=google-chrome
 Terminal=false
 Type=Application
-Categories=Application

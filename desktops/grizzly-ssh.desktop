@@ -4,4 +4,3 @@ Exec=bash -c 'ssh grizzly;$SHELL'
 Icon=utilities-terminal
 Terminal=true
 Type=Application
-Categories=Application

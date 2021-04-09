@@ -4,4 +4,3 @@ Exec=bash -c 'cd $HOME/code/nakama;code .'
 Icon=com.visualstudio.code
 Terminal=false
 Type=Application
-Categories=Application

@@ -4,4 +4,3 @@ Exec=bash -c 'cd $HOME/code/touchstone;code .'
 Icon=com.visualstudio.code
 Terminal=false
 Type=Application
-Categories=Application
