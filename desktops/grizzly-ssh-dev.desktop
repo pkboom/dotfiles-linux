@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=grizzly ssh dev
+Exec=bash -c 'ssh grizzly-dev;$SHELL'
+Icon=utilities-terminal
+Terminal=true
+Type=Application

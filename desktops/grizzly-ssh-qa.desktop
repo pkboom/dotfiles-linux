@@ -1,6 +1,6 @@
 [Desktop Entry]
-Name=grizzly ssh
-Exec=bash -c 'ssh grizzly;$SHELL'
+Name=grizzly ssh qa
+Exec=bash -c 'ssh grizzly-qa;$SHELL'
 Icon=utilities-terminal
 Terminal=true
 Type=Application

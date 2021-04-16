@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=matsu filezilla
+Exec=filezilla --site="0/matsu"
+Icon=/usr/share/icons/Mint-Y/apps/96/filezilla.png
+Terminal=false
+Type=Application
