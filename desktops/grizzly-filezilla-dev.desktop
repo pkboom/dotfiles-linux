@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=matsu filezilla dev
+Name=grizzly filezilla dev
 Exec=filezilla --site="0/grizzly-dev"
 Icon=/usr/share/icons/Mint-Y/apps/96/filezilla.png
 Terminal=false
