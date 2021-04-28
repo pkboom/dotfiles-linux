@@ -167,3 +167,14 @@ function scheduler () {
         sleep 60
     done
 }
+
+function merge() {
+     if [ -n "$1" ]; then # If command line argument is present
+        git checkout $1 
+        git merge develop
+        git push
+        git checkout develop
+    else
+        echo 'Need a branch name.'
+    fi
+}
