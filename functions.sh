@@ -169,7 +169,8 @@ function scheduler () {
 }
 
 function merge() {
-     if [ -n "$1" ]; then # If command line argument is present
+     if [ -n "$1" ]; then
+        git stash -u
         git checkout $1 
         git merge develop
         git push
