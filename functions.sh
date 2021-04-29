@@ -175,6 +175,7 @@ function merge() {
         git merge develop
         git push
         git checkout develop
+        git stash pop 
     else
         echo 'Need a branch name.'
     fi
