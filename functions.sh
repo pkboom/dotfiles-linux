@@ -156,16 +156,8 @@ import-format() {
     fi
 }
 
-function mkcd() {
+function mkdircd() {
    mkdir -p "$@" && cd "$@"
-}
-
-function scheduler () {
-    while :; do
-        php artisan schedule:run
-	echo "Sleeping 60 seconds..."
-        sleep 60
-    done
 }
 
 function merge() {
