@@ -1,6 +1,6 @@
 [Desktop Entry]
-Name=grizzly code
-Exec=bash -c 'cd $HOME/code/grizzly;code .'
+Name=acto code
+Exec=bash -c 'cd "$HOME/code/acto3.0";code application'
 Icon=com.visualstudio.code
 Terminal=false
 Type=Application

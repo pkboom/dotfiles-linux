@@ -1,6 +1,0 @@
-[Desktop Entry]
-Name=grizzly papertrailapp
-Exec=/usr/bin/google-chrome-stable https://my.papertrailapp.com/systems/curved-crater-grizzly-paw-dev/events
-Icon=google-chrome
-Terminal=false
-Type=Application

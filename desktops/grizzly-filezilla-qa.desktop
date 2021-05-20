@@ -1,6 +1,0 @@
-[Desktop Entry]
-Name=grizzly filezilla qa
-Exec=filezilla --site="0/grizzly-qa"
-Icon=/usr/share/icons/Mint-Y/apps/96/filezilla.png
-Terminal=false
-Type=Application
