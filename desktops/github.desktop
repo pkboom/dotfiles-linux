@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=github
+Exec=/usr/bin/google-chrome-stable https://github.com/pkboom?tab=repositories
+Icon=google-chrome
+Terminal=false
+Type=Application

@@ -160,6 +160,10 @@ function mkdircd() {
    mkdir -p "$@" && cd "$@"
 }
 
+function rmrf() {
+    rm -rf "$1"
+}
+
 function merge() {
      if [ -n "$1" ]; then
         git stash -u
