@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=acto start
+Exec=bash -c '$HOME/code/acto_start.sh'
+Icon=utilities-terminal
+Terminal=true
+Type=Application

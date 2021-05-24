@@ -1,6 +1,6 @@
 [Desktop Entry]
-Name=grizzly ssh dev
-Exec=bash -c 'ssh grizzly-dev;$SHELL'
+Name=acto end 
+Exec=bash -c '$HOME/code/acto_end.sh'
 Icon=utilities-terminal
 Terminal=true
 Type=Application

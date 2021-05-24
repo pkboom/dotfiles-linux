@@ -176,3 +176,7 @@ function merge() {
         echo 'Need a branch name.'
     fi
 }
+
+function dart() {
+    docker-compose exec php php artisan "$@"
+}
