@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=experiment.test
-Exec=/usr/bin/google-chrome-stable https://experiment.test/
+Exec=/usr/bin/google-chrome-stable http://experiment.test/
 Icon=google-chrome
 Terminal=false
 Type=Application

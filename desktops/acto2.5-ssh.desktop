@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=acto2.5 ssh
+Exec=bash -c 'ssh acto2.5;$SHELL'
+Icon=utilities-terminal
+Terminal=true
+Type=Application
