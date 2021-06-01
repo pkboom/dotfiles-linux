@@ -46,16 +46,6 @@ function watch() {
     fi
 }
 
-function weather() {
-   city="$1"
-
-   if [ -z "$city" ]; then
-      city="Hamilton"
-   fi
-
-   eval "curl http://wttr.in/${city}"
-}
-
 function xdebug() {
     read -p "Is php 8.0 and is xdebug /usr/lib/php/20190902/xdebug.so " -n 1 -r
 
