@@ -173,16 +173,6 @@ function dart() {
     docker-compose exec php php artisan "$@"
 }
 
-function dnpm() {
-    if [ "$1" = "dev" ]; then
-        docker-compose exec php npm run dev
-    elif [ "$1" = "watch" ]; then
-        docker-compose exec php npm run watch  
-    else
-        docker-compose exec php npm "$@"
-    fi
-}
-
 function dock() {
     if [ "$1" = "dev" ]; then
         docker-compose exec php npm run dev
