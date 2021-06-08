@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=web
+Name=terminal
 Exec=gnome-terminal --working-directory=/home/y/code
 Icon=utilities-terminal
 Terminal=false
