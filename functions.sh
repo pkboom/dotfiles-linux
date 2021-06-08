@@ -179,5 +179,4 @@ function dock() {
     else
         docker-compose exec php zsh
     fi
-    
 }
