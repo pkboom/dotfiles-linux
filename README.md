@@ -115,3 +115,5 @@ GRUB_TIMEOUT=1
 BrowseRemoteProtocols none
 
 sudo service cups restart
+
+### [Setup swap memory](https://linuxize.com/post/how-to-add-swap-space-on-ubuntu-20-04/)
