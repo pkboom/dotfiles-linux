@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=pingcrm.test
+Exec=/usr/bin/google-chrome-stable http://pingcrm.test/
+Icon=google-chrome
+Terminal=false
+Type=Application

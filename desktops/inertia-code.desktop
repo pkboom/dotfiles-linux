@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=inertia code
+Exec=bash -c 'cd $HOME/code/inertia;code .'
+Icon=com.visualstudio.code
+Terminal=false
+Type=Application
