@@ -1,6 +1,0 @@
-[Desktop Entry]
-Name=acto stop 
-Exec=bash -c '$HOME/code/acto_stop.sh'
-Icon=utilities-terminal
-Terminal=true
-Type=Application

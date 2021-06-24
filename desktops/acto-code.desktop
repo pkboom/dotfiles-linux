@@ -1,6 +1,0 @@
-[Desktop Entry]
-Name=acto code
-Exec=bash -c 'cd "$HOME/code/acto3.0";code application'
-Icon=com.visualstudio.code
-Terminal=false
-Type=Application

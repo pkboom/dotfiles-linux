@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=inertia doc
+Exec=/usr/bin/google-chrome-stable inertiajs.com/how-it-works
+Icon=google-chrome
+Terminal=false
+Type=Application
