@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=dotfiles code
-Exec=bash -c 'cd $HOME;code .dotfiles'
+Exec=bash -c 'code $HOME/.dotfiles'
 Icon=com.visualstudio.code
 Terminal=false
 Type=Application

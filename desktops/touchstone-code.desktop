@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=touchstone code
-Exec=bash -c 'cd $HOME/code/touchstone;code .'
+Exec=bash -c 'code $HOME/code/touchstone'
 Icon=com.visualstudio.code
 Terminal=false
 Type=Application

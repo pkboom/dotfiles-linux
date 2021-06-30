@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=pingcrm code
-Exec=bash -c 'cd $HOME/code/pingcrm;code .'
+Exec=bash -c 'code $HOME/code/pingcrm'
 Icon=com.visualstudio.code
 Terminal=false
 Type=Application

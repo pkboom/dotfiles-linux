@@ -1,6 +1,6 @@
 [Desktop Entry]
-Name=inertia code
-Exec=bash -c 'code $HOME/code/inertia'
+Name=tailwind code
+Exec=bash -c 'code $HOME/code/tailwindcss'
 Icon=com.visualstudio.code
 Terminal=false
 Type=Application
