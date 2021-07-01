@@ -40,9 +40,7 @@ function art() {
 
 function watch() {
     if [ -n "$1" ]; then
-        echo "cd nova-components/$1"
-
-        cd nova-components/$1 && npm run watch 
+        cd $1 && npm run watch 
     else
         npm run watch
     fi
@@ -137,17 +135,9 @@ function switch_db() {
 }
 
 function import-format() {
-    if [ -n "$1" ]; then # If command line argument is present
-        cd $1
-
-        wget https://raw.githubusercontent.com/pkboom/format/master/.eslintrc.js
-        wget https://raw.githubusercontent.com/pkboom/format/master/.php_cs.dist
-        wget https://raw.githubusercontent.com/pkboom/format/master/.prettierrc    
-    else
-        wget https://raw.githubusercontent.com/pkboom/format/master/.eslintrc.js
-        wget https://raw.githubusercontent.com/pkboom/format/master/.php_cs.dist
-        wget https://raw.githubusercontent.com/pkboom/format/master/.prettierrc    
-    fi
+    wget https://raw.githubusercontent.com/pkboom/format/master/.eslintrc.js
+    wget https://raw.githubusercontent.com/pkboom/format/master/.php_cs.dist
+    wget https://raw.githubusercontent.com/pkboom/format/master/.prettierrc    
 }
 
 function mkdircd() {
@@ -156,17 +146,4 @@ function mkdircd() {
 
 function rmrf() {
     rm -rf "$1"
-}
-
-function merge() {
-     if [ -n "$1" ]; then
-        git stash -u
-        git checkout $1 
-        git merge develop
-        git push
-        git checkout develop
-        git stash pop 
-    else
-        echo 'Need a branch name.'
-    fi
 }
